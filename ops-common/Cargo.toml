@@ -1,0 +1,15 @@
+[package]
+name = "ops-common"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+serde = { workspace = true }
+sysinfo = {workspace = true}
+hostname = {workspace = true}
+pnet_datalink = {workspace = true}
+toml = "0.8"
+uuid = { version = "1.17.0", features = ["v4"] }
+sha2 = "0.10"
+hmac = "0.12"
+hex = "0.4"

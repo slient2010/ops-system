@@ -1,0 +1,22 @@
+[package]
+name = "ops-server"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+ops-common = { path = "../ops-common" }
+serde = { workspace = true }
+serde_json = { workspace = true }
+socket2 = { workspace = true }
+tokio = { workspace = true }
+axum = { version = "0.8.4"} 
+axum-server = "0.7.2"
+dashmap = "6.1.0"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "fmt", "std"] }
+tracing-appender = "0.2"
+uuid = { version = "1.17.0", features = ["v4"] }
+chrono = { version = "0.4", features = ["serde"] }
+
+[dev-dependencies]
+axum-test = "18.0"

@@ -1,0 +1,91 @@
+# Rust/Cargo generated files
+/target/
+**/*.rs.bk
+**/*.rs.bak
+
+# IDE and editor files
+*.swp
+*.swo
+*.swn
+*.iml
+*.ipr
+*.iws
+*.DS_Store
+*.pyc
+*.pyo
+*.pyd
+*.orig
+*.rej
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# CLion
+/.idea/
+/.clion/
+*.sln
+*.suo
+*.user
+*.userosscache
+*.sdf
+*.opensdf
+*.VC.db
+*.VC.opendb
+*.log
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*.so
+*.a
+*.dylib
+
+# Build artifacts
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.pnp.log
+
+# Python
+__pycache__
+.env
+.venv
+env/
+venv/
+*.pyc
+*.pyo
+*.pyd
+*.db
+
+# Rustfmt
+**/*.rs.bk
+**/*.rs.bak
+
+# Cargo lock files (if you don't want to commit them)
+Cargo.lock

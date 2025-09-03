@@ -1,0 +1,53 @@
+# Multi-stage build for the server
+FROM rust:1.75-slim as builder
+
+WORKDIR /app
+
+# Install build dependencies
+RUN apt-get update && apt-get install -y \
+    pkg-config \
+    libssl-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy workspace files
+COPY Cargo.toml Cargo.lock ./
+COPY ops-common ./ops-common
+COPY ops-server ./ops-server
+
+# Build the server
+RUN cargo build --release --bin ops-server
+
+# Runtime stage
+FROM debian:bookworm-slim
+
+# Install runtime dependencies
+RUN apt-get update && apt-get install -y \
+    ca-certificates \
+    && rm -rf /var/lib/apt/lists/*
+
+# Create app user
+RUN useradd -r -s /bin/false appuser
+
+# Copy the binary
+COPY --from=builder /app/target/release/ops-server /usr/local/bin/ops-server
+COPY --from=builder /app/ops-server/static /app/static
+
+# Set permissions
+RUN chown appuser:appuser /usr/local/bin/ops-server
+
+# Switch to app user
+USER appuser
+
+# Expose ports
+EXPOSE 3000 12345
+
+# Set environment variables
+ENV RUST_LOG=info
+ENV OPS_HTTP_BIND_ADDR=0.0.0.0
+ENV OPS_TCP_BIND_ADDR=0.0.0.0
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
+    CMD curl -f http://localhost:3000/health || exit 1
+
+CMD ["ops-server"]

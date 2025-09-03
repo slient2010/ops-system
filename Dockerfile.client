@@ -1,0 +1,57 @@
+# Multi-stage build for the client
+FROM rust:1.75-slim as builder
+
+WORKDIR /app
+
+# Install build dependencies
+RUN apt-get update && apt-get install -y \
+    pkg-config \
+    libssl-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy workspace files
+COPY Cargo.toml Cargo.lock ./
+COPY ops-common ./ops-common
+COPY ops-client ./ops-client
+
+# Build the client
+RUN cargo build --release --bin ops-client
+
+# Runtime stage
+FROM debian:bookworm-slim
+
+# Install runtime dependencies
+RUN apt-get update && apt-get install -y \
+    ca-certificates \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
+# Create app user
+RUN useradd -r -s /bin/false appuser
+
+# Create necessary directories
+RUN mkdir -p /tmp/apps /var/log/ops-client && \
+    chown -R appuser:appuser /tmp/apps /var/log/ops-client
+
+# Copy the binary
+COPY --from=builder /app/target/release/ops-client /usr/local/bin/ops-client
+
+# Set permissions
+RUN chown appuser:appuser /usr/local/bin/ops-client
+
+# Switch to app user
+USER appuser
+
+# Set environment variables
+ENV RUST_LOG=info
+ENV OPS_SERVER_HOST=ops-server
+ENV OPS_SERVER_PORT=12345
+ENV OPS_CLIENT_ID_FILE=/tmp/client_id.txt
+ENV OPS_APPS_BASE_DIR=/tmp/apps
+ENV OPS_COMMAND_LOG_FILE=/var/log/ops-client/commands.log
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
+    CMD ps aux | grep ops-client | grep -v grep || exit 1
+
+CMD ["ops-client"]

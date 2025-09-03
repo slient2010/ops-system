@@ -1,0 +1,752 @@
+2025-09-01T00:02:59.726577Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #2786: Connection timed out (os error 110)
+2025-09-01T00:02:59.726758Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-09-01T00:02:59.727455Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-09-01T00:02:59.727567Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-09-01T00:19:24.810600Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #2886: Connection timed out (os error 110)
+2025-09-01T00:19:24.810662Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-09-01T00:19:24.811323Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-09-01T00:19:24.811436Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-09-01T00:35:39.658673Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #2984: Connection timed out (os error 110)
+2025-09-01T00:35:39.658722Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-09-01T00:35:39.659510Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-09-01T00:35:39.659666Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-09-01T00:52:02.698807Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #3084: Connection timed out (os error 110)
+2025-09-01T00:52:02.698895Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-09-01T00:52:02.699988Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-09-01T00:52:02.700135Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-09-01T01:08:19.595018Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #3183: Connection timed out (os error 110)
+2025-09-01T01:08:19.595162Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-09-01T01:08:19.595947Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-09-01T01:08:19.596058Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-09-01T01:24:44.682585Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #3284: Connection timed out (os error 110)
+2025-09-01T01:24:44.682666Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-09-01T01:24:44.683375Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-09-01T01:24:44.683486Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-09-01T01:41:05.674775Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #3384: Connection timed out (os error 110)
+2025-09-01T01:41:05.674897Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-09-01T01:41:05.675786Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-09-01T01:41:05.675914Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-09-01T01:57:30.762795Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #3484: Connection timed out (os error 110)
+2025-09-01T01:57:30.762957Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-09-01T01:57:30.763746Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-09-01T01:57:30.763863Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-09-01T02:13:47.662769Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #3583: Connection timed out (os error 110)
+2025-09-01T02:13:47.662881Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-09-01T02:13:47.663577Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-09-01T02:13:47.663731Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-09-01T02:30:10.698815Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #3683: Connection timed out (os error 110)
+2025-09-01T02:30:10.698961Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-09-01T02:30:10.699787Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-09-01T02:30:10.699899Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-09-01T02:46:27.598715Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #3782: Connection timed out (os error 110)
+2025-09-01T02:46:27.598846Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-09-01T02:46:27.599571Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-09-01T02:46:27.599684Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-09-01T03:02:52.682593Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #3883: Connection timed out (os error 110)
+2025-09-01T03:02:52.682694Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-09-01T03:02:52.683717Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-09-01T03:02:52.683829Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-09-01T03:19:17.770769Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #3983: Connection timed out (os error 110)
+2025-09-01T03:19:17.770933Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-09-01T03:19:17.771623Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-09-01T03:19:17.771738Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-09-01T03:35:32.618859Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #4081: Connection timed out (os error 110)
+2025-09-01T03:35:32.618985Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-09-01T03:35:32.619821Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-09-01T03:35:32.619939Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-09-01T03:51:57.707007Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #4182: Connection timed out (os error 110)
+2025-09-01T03:51:57.707129Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-09-01T03:51:57.707799Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-09-01T03:51:57.707925Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-09-01T04:08:14.602917Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #4281: Connection timed out (os error 110)
+2025-09-01T04:08:14.603082Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-09-01T04:08:14.603867Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-09-01T04:08:14.603982Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-09-01T04:24:39.690590Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #4382: Connection timed out (os error 110)
+2025-09-01T04:24:39.690743Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-09-01T04:24:39.691463Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-09-01T04:24:39.691584Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-09-01T04:41:04.782511Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #4482: Connection timed out (os error 110)
+2025-09-01T04:41:04.782549Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-09-01T04:41:04.783390Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-09-01T04:41:04.783537Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-09-01T04:57:21.674628Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #4581: Connection timed out (os error 110)
+2025-09-01T04:57:21.674668Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-09-01T04:57:21.675547Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-09-01T04:57:21.675657Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-09-01T05:13:42.666760Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #4681: Connection timed out (os error 110)
+2025-09-01T05:13:42.666884Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-09-01T05:13:42.667611Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-09-01T05:13:42.667717Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-09-01T05:30:03.658619Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #4781: Connection timed out (os error 110)
+2025-09-01T05:30:03.658694Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-09-01T05:30:03.660077Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-09-01T05:30:03.660188Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-09-01T05:46:28.750804Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #4881: Connection timed out (os error 110)
+2025-09-01T05:46:28.750936Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-09-01T05:46:28.751705Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-09-01T05:46:28.751824Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-09-01T06:02:43.594840Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #4979: Connection timed out (os error 110)
+2025-09-01T06:02:43.594996Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-09-01T06:02:43.595633Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-09-01T06:02:43.595742Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-09-01T06:19:04.586710Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #5079: Connection timed out (os error 110)
+2025-09-01T06:19:04.586830Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-09-01T06:19:04.587938Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-09-01T06:19:04.588056Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-09-01T06:35:29.674606Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #5179: Connection timed out (os error 110)
+2025-09-01T06:35:29.674764Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-09-01T06:35:29.675469Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-09-01T06:35:29.675652Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-09-01T06:51:46.570661Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #5278: Connection timed out (os error 110)
+2025-09-01T06:51:46.570781Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-09-01T06:51:46.571667Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-09-01T06:51:46.571778Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-09-01T07:08:11.662665Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #5379: Connection timed out (os error 110)
+2025-09-01T07:08:11.662838Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-09-01T07:08:11.663734Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-09-01T07:08:11.663857Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-09-01T07:24:28.554623Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #5478: Connection timed out (os error 110)
+2025-09-01T07:24:28.554740Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-09-01T07:24:28.555420Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-09-01T07:24:28.555537Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-09-01T07:40:49.546752Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #5578: Connection timed out (os error 110)
+2025-09-01T07:40:49.546906Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-09-01T07:40:49.547872Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-09-01T07:40:49.547983Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-09-01T07:57:14.634653Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #5678: Connection timed out (os error 110)
+2025-09-01T07:57:14.634783Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-09-01T07:57:14.635961Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-09-01T07:57:14.636071Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-09-01T08:13:31.530812Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #5777: Connection timed out (os error 110)
+2025-09-01T08:13:31.530934Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-09-01T08:13:31.531984Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-09-01T08:13:31.532098Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-09-01T08:29:56.618786Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #5878: Connection timed out (os error 110)
+2025-09-01T08:29:56.618870Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-09-01T08:29:56.619694Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-09-01T08:29:56.619801Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-09-01T08:46:13.514574Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #5977: Connection timed out (os error 110)
+2025-09-01T08:46:13.514695Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-09-01T08:46:13.515739Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-09-01T08:46:13.515849Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-09-01T09:02:38.604822Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6078: Connection timed out (os error 110)
+2025-09-01T09:02:38.604984Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-09-01T09:02:38.605716Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-09-01T09:02:38.605826Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-09-01T09:18:55.498627Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6177: Connection timed out (os error 110)
+2025-09-01T09:18:55.498667Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-09-01T09:18:55.499484Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-09-01T09:18:55.499634Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-09-01T09:35:18.538704Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6277: Connection timed out (os error 110)
+2025-09-01T09:35:18.538838Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-09-01T09:35:18.539452Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-09-01T09:35:18.539579Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-09-01T09:51:35.434666Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6376: Connection timed out (os error 110)
+2025-09-01T09:51:35.434831Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-09-01T09:51:35.436641Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-09-01T09:51:35.436751Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-09-01T10:08:00.526848Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6476: Connection timed out (os error 110)
+2025-09-01T10:08:00.526973Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-09-01T10:08:00.528689Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-09-01T10:08:00.528801Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-09-01T10:24:17.418780Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6575: Connection timed out (os error 110)
+2025-09-01T10:24:17.418979Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-09-01T10:24:17.419922Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-09-01T10:24:17.420038Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-09-01T10:40:38.410669Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6675: Connection timed out (os error 110)
+2025-09-01T10:40:38.410838Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-09-01T10:40:38.411937Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-09-01T10:40:38.412059Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-09-01T10:56:55.306782Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6774: Network is unreachable (os error 101)
+2025-09-01T10:56:55.306901Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-09-01T10:56:55.307024Z  WARN ops_client::tcp_services::client: Connection failed (attempt 1/10): Network is unreachable (os error 101), retrying in 2s
+2025-09-01T10:56:57.307780Z  WARN ops_client::tcp_services::client: Connection failed (attempt 2/10): Network is unreachable (os error 101), retrying in 4s
+2025-09-01T10:56:58.690124Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6775: Broken pipe (os error 32)
+2025-09-01T10:56:58.690233Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 648.897997128s ago
+2025-09-01T10:57:01.309432Z  WARN ops_client::tcp_services::client: Connection failed (attempt 3/10): Network is unreachable (os error 101), retrying in 8s
+2025-09-01T10:57:02.074211Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6776: Broken pipe (os error 32)
+2025-09-01T10:57:02.074308Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 652.28208716s ago
+2025-09-01T10:57:05.443242Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6777: Broken pipe (os error 32)
+2025-09-01T10:57:05.443339Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 655.65111834s ago
+2025-09-01T10:57:08.825386Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6778: Broken pipe (os error 32)
+2025-09-01T10:57:08.825485Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 659.033260111s ago
+2025-09-01T10:57:09.311527Z  WARN ops_client::tcp_services::client: Connection failed (attempt 4/10): Network is unreachable (os error 101), retrying in 16s
+2025-09-01T10:57:12.207793Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6779: Broken pipe (os error 32)
+2025-09-01T10:57:12.207889Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 662.415669356s ago
+2025-09-01T10:57:15.588161Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6780: Broken pipe (os error 32)
+2025-09-01T10:57:15.588258Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 665.796034579s ago
+2025-09-01T10:57:18.970162Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6781: Broken pipe (os error 32)
+2025-09-01T10:57:18.970258Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 669.178038623s ago
+2025-09-01T10:57:22.336475Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6782: Broken pipe (os error 32)
+2025-09-01T10:57:22.336575Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 672.544350598s ago
+2025-09-01T10:57:25.313234Z  WARN ops_client::tcp_services::client: Connection failed (attempt 5/10): Network is unreachable (os error 101), retrying in 32s
+2025-09-01T10:57:25.718228Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6783: Broken pipe (os error 32)
+2025-09-01T10:57:25.718333Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 675.926101267s ago
+2025-09-01T10:57:29.100847Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6784: Broken pipe (os error 32)
+2025-09-01T10:57:29.100943Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 679.308720421s ago
+2025-09-01T10:57:32.480128Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6785: Broken pipe (os error 32)
+2025-09-01T10:57:32.480224Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 682.688005425s ago
+2025-09-01T10:57:35.863665Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6786: Broken pipe (os error 32)
+2025-09-01T10:57:35.863759Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 686.071538984s ago
+2025-09-01T10:57:39.244436Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6787: Broken pipe (os error 32)
+2025-09-01T10:57:39.244533Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 689.452309319s ago
+2025-09-01T10:57:42.610180Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6788: Broken pipe (os error 32)
+2025-09-01T10:57:42.610278Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 692.818055312s ago
+2025-09-01T10:57:45.991023Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6789: Broken pipe (os error 32)
+2025-09-01T10:57:45.991117Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 696.198896795s ago
+2025-09-01T10:57:49.369688Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6790: Broken pipe (os error 32)
+2025-09-01T10:57:49.369785Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 699.577559844s ago
+2025-09-01T10:57:52.751872Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6791: Broken pipe (os error 32)
+2025-09-01T10:57:52.751968Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 702.959744932s ago
+2025-09-01T10:57:56.135683Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6792: Broken pipe (os error 32)
+2025-09-01T10:57:56.135780Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 706.343556219s ago
+2025-09-01T10:57:57.315493Z  WARN ops_client::tcp_services::client: Connection failed (attempt 6/10): Network is unreachable (os error 101), retrying in 60s
+2025-09-01T10:57:59.519223Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6793: Broken pipe (os error 32)
+2025-09-01T10:57:59.519319Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 709.727097645s ago
+2025-09-01T10:58:02.881597Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6794: Broken pipe (os error 32)
+2025-09-01T10:58:02.881694Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 713.089470779s ago
+2025-09-01T10:58:06.268834Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6795: Broken pipe (os error 32)
+2025-09-01T10:58:06.268931Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 716.476707846s ago
+2025-09-01T10:58:09.651417Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6796: Broken pipe (os error 32)
+2025-09-01T10:58:09.651511Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 719.859290777s ago
+2025-09-01T10:58:13.035111Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6797: Broken pipe (os error 32)
+2025-09-01T10:58:13.035207Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 723.242987514s ago
+2025-09-01T10:58:16.412853Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6798: Broken pipe (os error 32)
+2025-09-01T10:58:16.412953Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 726.62072704s ago
+2025-09-01T10:58:19.775565Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6799: Broken pipe (os error 32)
+2025-09-01T10:58:19.775663Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 729.983438205s ago
+2025-09-01T10:58:23.148952Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6800: Broken pipe (os error 32)
+2025-09-01T10:58:23.149048Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 733.356825099s ago
+2025-09-01T10:58:26.531601Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6801: Broken pipe (os error 32)
+2025-09-01T10:58:26.531698Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 736.739474532s ago
+2025-09-01T10:58:29.914454Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6802: Broken pipe (os error 32)
+2025-09-01T10:58:29.914551Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 740.12231323s ago
+2025-09-01T10:58:33.283204Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6803: Broken pipe (os error 32)
+2025-09-01T10:58:33.283300Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 743.491078755s ago
+2025-09-01T10:58:36.663720Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6804: Broken pipe (os error 32)
+2025-09-01T10:58:36.663817Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 746.871593503s ago
+2025-09-01T10:58:40.026100Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6805: Broken pipe (os error 32)
+2025-09-01T10:58:40.026198Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 750.233975651s ago
+2025-09-01T10:58:43.391291Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6806: Broken pipe (os error 32)
+2025-09-01T10:58:43.391388Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 753.599165755s ago
+2025-09-01T10:58:46.772885Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6807: Broken pipe (os error 32)
+2025-09-01T10:58:46.772984Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 756.98075851s ago
+2025-09-01T10:58:50.154521Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6808: Broken pipe (os error 32)
+2025-09-01T10:58:50.154616Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 760.362395606s ago
+2025-09-01T10:58:53.530927Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6809: Broken pipe (os error 32)
+2025-09-01T10:58:53.531025Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 763.738800178s ago
+2025-09-01T10:58:56.895743Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6810: Broken pipe (os error 32)
+2025-09-01T10:58:56.895842Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 767.103616369s ago
+2025-09-01T10:58:57.316886Z  WARN ops_client::tcp_services::client: Connection failed (attempt 7/10): Network is unreachable (os error 101), retrying in 60s
+2025-09-01T10:59:00.276883Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6811: Broken pipe (os error 32)
+2025-09-01T10:59:00.276981Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 770.484757438s ago
+2025-09-01T10:59:03.653571Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6812: Broken pipe (os error 32)
+2025-09-01T10:59:03.653668Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 773.861443894s ago
+2025-09-01T10:59:07.037027Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6813: Broken pipe (os error 32)
+2025-09-01T10:59:07.037126Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 777.244900678s ago
+2025-09-01T10:59:10.400222Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6814: Broken pipe (os error 32)
+2025-09-01T10:59:10.400320Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 780.608095964s ago
+2025-09-01T10:59:13.777078Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6815: Broken pipe (os error 32)
+2025-09-01T10:59:13.777178Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 783.984952209s ago
+2025-09-01T10:59:17.144308Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6816: Broken pipe (os error 32)
+2025-09-01T10:59:17.144407Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 787.352182663s ago
+2025-09-01T10:59:20.510166Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6817: Broken pipe (os error 32)
+2025-09-01T10:59:20.510263Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 790.718038975s ago
+2025-09-01T10:59:23.892563Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6818: Broken pipe (os error 32)
+2025-09-01T10:59:23.892664Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 794.100436768s ago
+2025-09-01T10:59:27.273965Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6819: Broken pipe (os error 32)
+2025-09-01T10:59:27.274064Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 797.4818419s ago
+2025-09-01T10:59:30.655636Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6820: Broken pipe (os error 32)
+2025-09-01T10:59:30.655736Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 800.863511342s ago
+2025-09-01T10:59:34.022241Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6821: Broken pipe (os error 32)
+2025-09-01T10:59:34.022355Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 804.230115319s ago
+2025-09-01T10:59:37.388496Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6822: Broken pipe (os error 32)
+2025-09-01T10:59:37.388591Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 807.596371285s ago
+2025-09-01T10:59:40.762353Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6823: Broken pipe (os error 32)
+2025-09-01T10:59:40.762451Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 810.970215093s ago
+2025-09-01T10:59:44.129227Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6824: Broken pipe (os error 32)
+2025-09-01T10:59:44.129324Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 814.337101671s ago
+2025-09-01T10:59:47.510514Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6825: Broken pipe (os error 32)
+2025-09-01T10:59:47.510615Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 817.718389545s ago
+2025-09-01T10:59:50.887690Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6826: Broken pipe (os error 32)
+2025-09-01T10:59:50.887786Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 821.095562826s ago
+2025-09-01T10:59:54.264022Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6827: Broken pipe (os error 32)
+2025-09-01T10:59:54.264118Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 824.471895317s ago
+2025-09-01T10:59:57.630079Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6828: Broken pipe (os error 32)
+2025-09-01T10:59:57.630176Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 827.837951321s ago
+2025-09-01T10:59:57.630364Z  WARN ops_client::tcp_services::client: Connection failed (attempt 8/10): Network is unreachable (os error 101), retrying in 60s
+2025-09-01T11:00:01.007861Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6829: Broken pipe (os error 32)
+2025-09-01T11:00:01.007957Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 831.215734136s ago
+2025-09-01T11:00:04.387666Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6830: Broken pipe (os error 32)
+2025-09-01T11:00:04.387763Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 834.595540801s ago
+2025-09-01T11:00:07.764375Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6831: Broken pipe (os error 32)
+2025-09-01T11:00:07.764474Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 837.972248277s ago
+2025-09-01T11:00:11.145005Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6832: Broken pipe (os error 32)
+2025-09-01T11:00:11.145103Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 841.352877528s ago
+2025-09-01T11:00:14.505372Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6833: Broken pipe (os error 32)
+2025-09-01T11:00:14.505467Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 844.71324636s ago
+2025-09-01T11:00:17.872141Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6834: Broken pipe (os error 32)
+2025-09-01T11:00:17.872239Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 848.080014251s ago
+2025-09-01T11:00:21.256477Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6835: Broken pipe (os error 32)
+2025-09-01T11:00:21.256577Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 851.46435207s ago
+2025-09-01T11:00:24.637341Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6836: Broken pipe (os error 32)
+2025-09-01T11:00:24.637437Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 854.845213649s ago
+2025-09-01T11:00:28.020685Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6837: Broken pipe (os error 32)
+2025-09-01T11:00:28.020782Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 858.228557965s ago
+2025-09-01T11:00:31.400567Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6838: Broken pipe (os error 32)
+2025-09-01T11:00:31.400665Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 861.608438841s ago
+2025-09-01T11:00:34.767909Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6839: Broken pipe (os error 32)
+2025-09-01T11:00:34.768003Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 864.975783386s ago
+2025-09-01T11:00:38.133436Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6840: Broken pipe (os error 32)
+2025-09-01T11:00:38.133532Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 868.341309881s ago
+2025-09-01T11:00:41.516076Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6841: Broken pipe (os error 32)
+2025-09-01T11:00:41.516170Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 871.723948993s ago
+2025-09-01T11:00:44.893482Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6842: Broken pipe (os error 32)
+2025-09-01T11:00:44.893578Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 875.101354834s ago
+2025-09-01T11:00:48.272816Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6843: Broken pipe (os error 32)
+2025-09-01T11:00:48.272911Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 878.480689594s ago
+2025-09-01T11:00:51.649732Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6844: Broken pipe (os error 32)
+2025-09-01T11:00:51.649827Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 881.857607473s ago
+2025-09-01T11:00:55.013575Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6845: Broken pipe (os error 32)
+2025-09-01T11:00:55.013669Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 885.221448215s ago
+2025-09-01T11:00:57.631822Z  WARN ops_client::tcp_services::client: Connection failed (attempt 9/10): Network is unreachable (os error 101), retrying in 60s
+2025-09-01T11:00:58.395616Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6846: Broken pipe (os error 32)
+2025-09-01T11:00:58.395712Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 888.603487828s ago
+2025-09-01T11:01:01.758472Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6847: Broken pipe (os error 32)
+2025-09-01T11:01:01.758570Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 891.966338025s ago
+2025-09-01T11:01:05.141490Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6848: Broken pipe (os error 32)
+2025-09-01T11:01:05.141589Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 895.349365781s ago
+2025-09-01T11:01:08.524677Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6849: Broken pipe (os error 32)
+2025-09-01T11:01:08.524774Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 898.732551819s ago
+2025-09-01T11:01:11.887352Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6850: Broken pipe (os error 32)
+2025-09-01T11:01:11.887448Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 902.095227755s ago
+2025-09-01T11:01:15.250981Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6851: Broken pipe (os error 32)
+2025-09-01T11:01:15.251079Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 905.458857254s ago
+2025-09-01T11:01:18.632830Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6852: Broken pipe (os error 32)
+2025-09-01T11:01:18.632929Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 908.84070345s ago
+2025-09-01T11:01:22.015914Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6853: Broken pipe (os error 32)
+2025-09-01T11:01:22.016012Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 912.223790244s ago
+2025-09-01T11:01:25.393111Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6854: Broken pipe (os error 32)
+2025-09-01T11:01:25.393209Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 915.600984804s ago
+2025-09-01T11:01:28.775583Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6855: Broken pipe (os error 32)
+2025-09-01T11:01:28.775682Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 918.983456755s ago
+2025-09-01T11:01:32.140642Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6856: Broken pipe (os error 32)
+2025-09-01T11:01:32.140741Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 922.348515745s ago
+2025-09-01T11:01:35.504876Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6857: Broken pipe (os error 32)
+2025-09-01T11:01:35.504975Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 925.712749469s ago
+2025-09-01T11:01:38.885272Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6858: Broken pipe (os error 32)
+2025-09-01T11:01:38.885371Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 929.09314653s ago
+2025-09-01T11:01:42.267086Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6859: Broken pipe (os error 32)
+2025-09-01T11:01:42.267184Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 932.474958546s ago
+2025-09-01T11:01:45.642057Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6860: Broken pipe (os error 32)
+2025-09-01T11:01:45.642159Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 935.849930439s ago
+2025-09-01T11:01:49.021409Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6861: Broken pipe (os error 32)
+2025-09-01T11:01:49.021507Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 939.22928234s ago
+2025-09-01T11:01:52.382044Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6862: Broken pipe (os error 32)
+2025-09-01T11:01:52.382143Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 942.58991778s ago
+2025-09-01T11:01:55.758892Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6863: Broken pipe (os error 32)
+2025-09-01T11:01:55.758992Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 945.966767022s ago
+2025-09-01T11:01:57.632666Z  WARN ops_client::tcp_services::client: Connection failed (attempt 10/10): Network is unreachable (os error 101), retrying in 60s
+2025-09-01T11:01:59.139510Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6864: Broken pipe (os error 32)
+2025-09-01T11:01:59.139608Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 949.347382637s ago
+2025-09-01T11:02:02.518545Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6865: Broken pipe (os error 32)
+2025-09-01T11:02:02.518643Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 952.726421541s ago
+2025-09-01T11:02:05.898675Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6866: Broken pipe (os error 32)
+2025-09-01T11:02:05.898773Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 956.10655129s ago
+2025-09-01T11:02:09.262010Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6867: Broken pipe (os error 32)
+2025-09-01T11:02:09.262109Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 959.469884271s ago
+2025-09-01T11:02:12.627548Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6868: Broken pipe (os error 32)
+2025-09-01T11:02:12.627647Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 962.83542193s ago
+2025-09-01T11:02:16.009506Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6869: Broken pipe (os error 32)
+2025-09-01T11:02:16.009603Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 966.217382441s ago
+2025-09-01T11:02:19.387202Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6870: Broken pipe (os error 32)
+2025-09-01T11:02:19.387298Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 969.595075428s ago
+2025-09-01T11:02:22.768214Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6871: Broken pipe (os error 32)
+2025-09-01T11:02:22.768309Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 972.976087722s ago
+2025-09-01T11:02:26.151048Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6872: Broken pipe (os error 32)
+2025-09-01T11:02:26.151147Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 976.358919908s ago
+2025-09-01T11:02:29.511717Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6873: Broken pipe (os error 32)
+2025-09-01T11:02:29.511815Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 979.719590687s ago
+2025-09-01T11:02:32.874401Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6874: Broken pipe (os error 32)
+2025-09-01T11:02:32.874503Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 983.082258691s ago
+2025-09-01T11:02:36.249849Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6875: Broken pipe (os error 32)
+2025-09-01T11:02:36.249947Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 986.457722389s ago
+2025-09-01T11:02:39.630055Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6876: Broken pipe (os error 32)
+2025-09-01T11:02:39.630154Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 989.837929002s ago
+2025-09-01T11:02:43.010834Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6877: Broken pipe (os error 32)
+2025-09-01T11:02:43.010934Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 993.218707038s ago
+2025-09-01T11:02:46.388077Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6878: Broken pipe (os error 32)
+2025-09-01T11:02:46.388176Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 996.595949736s ago
+2025-09-01T11:02:49.770933Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6879: Broken pipe (os error 32)
+2025-09-01T11:02:49.771031Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 999.9788065s ago
+2025-09-01T11:02:53.156245Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6880: Broken pipe (os error 32)
+2025-09-01T11:02:53.156340Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1003.364118807s ago
+2025-09-01T11:02:56.545526Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6881: Broken pipe (os error 32)
+2025-09-01T11:02:56.545620Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1006.753399624s ago
+2025-09-01T11:02:57.634131Z ERROR ops_client::tcp_services::client: Max retry attempts reached for 192.168.4.208:12345: Network is unreachable (os error 101)
+2025-09-01T11:02:57.634229Z ERROR ops_client::tcp_services::client: 重新连接失败，等待后重试
+2025-09-01T11:02:59.934484Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6882: Broken pipe (os error 32)
+2025-09-01T11:02:59.934581Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1010.142328063s ago
+2025-09-01T11:03:02.635871Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-09-01T11:03:02.636033Z  WARN ops_client::tcp_services::client: Connection failed (attempt 1/10): Network is unreachable (os error 101), retrying in 2s
+2025-09-01T11:03:03.322765Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6883: Broken pipe (os error 32)
+2025-09-01T11:03:03.322861Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1013.530638966s ago
+2025-09-01T11:03:04.636642Z  WARN ops_client::tcp_services::client: Connection failed (attempt 2/10): Network is unreachable (os error 101), retrying in 4s
+2025-09-01T11:03:06.714830Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6884: Broken pipe (os error 32)
+2025-09-01T11:03:06.714928Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1016.922704406s ago
+2025-09-01T11:03:08.638424Z  WARN ops_client::tcp_services::client: Connection failed (attempt 3/10): Network is unreachable (os error 101), retrying in 8s
+2025-09-01T11:03:10.104841Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6885: Broken pipe (os error 32)
+2025-09-01T11:03:10.104948Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1020.312716266s ago
+2025-09-01T11:03:13.492653Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6886: Broken pipe (os error 32)
+2025-09-01T11:03:13.492748Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1023.70052736s ago
+2025-09-01T11:03:16.880303Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6887: Broken pipe (os error 32)
+2025-09-01T11:03:16.880400Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1027.088177129s ago
+2025-09-01T11:03:16.880573Z  WARN ops_client::tcp_services::client: Connection failed (attempt 4/10): Network is unreachable (os error 101), retrying in 16s
+2025-09-01T11:03:20.269385Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6888: Broken pipe (os error 32)
+2025-09-01T11:03:20.269482Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1030.47725652s ago
+2025-09-01T11:03:23.657903Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6889: Broken pipe (os error 32)
+2025-09-01T11:03:23.658000Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1033.865776837s ago
+2025-09-01T11:03:27.030437Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6890: Broken pipe (os error 32)
+2025-09-01T11:03:27.030537Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1037.238294203s ago
+2025-09-01T11:03:30.402228Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6891: Broken pipe (os error 32)
+2025-09-01T11:03:30.402357Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1040.610101673s ago
+2025-09-01T11:03:32.882342Z  WARN ops_client::tcp_services::client: Connection failed (attempt 5/10): Network is unreachable (os error 101), retrying in 32s
+2025-09-01T11:03:33.788881Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6892: Broken pipe (os error 32)
+2025-09-01T11:03:33.788978Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1043.996695029s ago
+2025-09-01T11:03:37.158298Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6893: Broken pipe (os error 32)
+2025-09-01T11:03:37.158411Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1047.366173443s ago
+2025-09-01T11:03:40.530739Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6894: Broken pipe (os error 32)
+2025-09-01T11:03:40.530837Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1050.7386153s ago
+2025-09-01T11:03:43.905457Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6895: Broken pipe (os error 32)
+2025-09-01T11:03:43.905554Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1054.113330201s ago
+2025-09-01T11:03:47.276955Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6896: Broken pipe (os error 32)
+2025-09-01T11:03:47.277049Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1057.484827072s ago
+2025-09-01T11:03:50.660062Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6897: Broken pipe (os error 32)
+2025-09-01T11:03:50.660159Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1060.867935341s ago
+2025-09-01T11:03:54.044577Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6898: Broken pipe (os error 32)
+2025-09-01T11:03:54.044669Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1064.252450249s ago
+2025-09-01T11:03:57.432011Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6899: Broken pipe (os error 32)
+2025-09-01T11:03:57.432109Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1067.63988784s ago
+2025-09-01T11:04:00.815262Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6900: Broken pipe (os error 32)
+2025-09-01T11:04:00.815358Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1071.023134987s ago
+2025-09-01T11:04:04.206503Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6901: Broken pipe (os error 32)
+2025-09-01T11:04:04.206599Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1074.414307317s ago
+2025-09-01T11:04:04.884609Z  WARN ops_client::tcp_services::client: Connection failed (attempt 6/10): Network is unreachable (os error 101), retrying in 60s
+2025-09-01T11:04:07.593494Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6902: Broken pipe (os error 32)
+2025-09-01T11:04:07.593589Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1077.801368189s ago
+2025-09-01T11:04:10.957419Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6903: Broken pipe (os error 32)
+2025-09-01T11:04:10.957515Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1081.165291717s ago
+2025-09-01T11:04:14.342193Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6904: Broken pipe (os error 32)
+2025-09-01T11:04:14.342290Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1084.550064611s ago
+2025-09-01T11:04:17.725719Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6905: Broken pipe (os error 32)
+2025-09-01T11:04:17.725813Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1087.933592362s ago
+2025-09-01T11:04:21.105514Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6906: Broken pipe (os error 32)
+2025-09-01T11:04:21.105609Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1091.313387199s ago
+2025-09-01T11:04:24.474641Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6907: Broken pipe (os error 32)
+2025-09-01T11:04:24.474737Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1094.68251562s ago
+2025-09-01T11:04:27.839859Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6908: Broken pipe (os error 32)
+2025-09-01T11:04:27.839956Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1098.047731323s ago
+2025-09-01T11:04:31.222606Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6909: Broken pipe (os error 32)
+2025-09-01T11:04:31.222702Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1101.430478852s ago
+2025-09-01T11:04:34.604378Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6910: Broken pipe (os error 32)
+2025-09-01T11:04:34.604473Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1104.81225114s ago
+2025-09-01T11:04:37.988661Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6911: Broken pipe (os error 32)
+2025-09-01T11:04:37.988757Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1108.19653511s ago
+2025-09-01T11:04:41.367028Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6912: Broken pipe (os error 32)
+2025-09-01T11:04:41.367123Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1111.574901524s ago
+2025-09-01T11:04:44.733406Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6913: Broken pipe (os error 32)
+2025-09-01T11:04:44.733502Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1114.941279603s ago
+2025-09-01T11:04:48.113928Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6914: Broken pipe (os error 32)
+2025-09-01T11:04:48.114024Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1118.321801446s ago
+2025-09-01T11:04:51.494649Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6915: Broken pipe (os error 32)
+2025-09-01T11:04:51.494746Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1121.702520539s ago
+2025-09-01T11:04:54.874071Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6916: Broken pipe (os error 32)
+2025-09-01T11:04:54.874167Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1125.081945387s ago
+2025-09-01T11:04:58.255448Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6917: Broken pipe (os error 32)
+2025-09-01T11:04:58.255545Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1128.463322436s ago
+2025-09-01T11:05:01.633107Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6918: Broken pipe (os error 32)
+2025-09-01T11:05:01.633205Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1131.84098156s ago
+2025-09-01T11:05:04.996340Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6919: Broken pipe (os error 32)
+2025-09-01T11:05:04.996439Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1135.204215999s ago
+2025-09-01T11:05:04.996612Z  WARN ops_client::tcp_services::client: Connection failed (attempt 7/10): Network is unreachable (os error 101), retrying in 60s
+2025-09-01T11:05:08.373120Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6920: Broken pipe (os error 32)
+2025-09-01T11:05:08.373217Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1138.580992581s ago
+2025-09-01T11:05:11.755504Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6921: Broken pipe (os error 32)
+2025-09-01T11:05:11.755602Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1141.963377371s ago
+2025-09-01T11:05:15.135783Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6922: Broken pipe (os error 32)
+2025-09-01T11:05:15.135882Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1145.343655636s ago
+2025-09-01T11:05:18.515410Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6923: Broken pipe (os error 32)
+2025-09-01T11:05:18.515508Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1148.723284632s ago
+2025-09-01T11:05:21.880399Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6924: Broken pipe (os error 32)
+2025-09-01T11:05:21.880494Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1152.088271228s ago
+2025-09-01T11:05:25.242230Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6925: Broken pipe (os error 32)
+2025-09-01T11:05:25.242363Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1155.450103427s ago
+2025-09-01T11:05:28.625100Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6926: Broken pipe (os error 32)
+2025-09-01T11:05:28.625198Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1158.832974143s ago
+2025-09-01T11:05:32.003595Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6927: Broken pipe (os error 32)
+2025-09-01T11:05:32.003695Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1162.211470701s ago
+2025-09-01T11:05:35.383766Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6928: Broken pipe (os error 32)
+2025-09-01T11:05:35.383862Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1165.591639057s ago
+2025-09-01T11:05:38.763045Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6929: Broken pipe (os error 32)
+2025-09-01T11:05:38.763143Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1168.970917973s ago
+2025-09-01T11:05:42.127655Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6930: Broken pipe (os error 32)
+2025-09-01T11:05:42.127752Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1172.335530422s ago
+2025-09-01T11:05:45.493064Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6931: Broken pipe (os error 32)
+2025-09-01T11:05:45.493160Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1175.700938086s ago
+2025-09-01T11:05:48.874030Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6932: Broken pipe (os error 32)
+2025-09-01T11:05:48.874126Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1179.081906792s ago
+2025-09-01T11:05:52.251513Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6933: Broken pipe (os error 32)
+2025-09-01T11:05:52.251610Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1182.459387525s ago
+2025-09-01T11:05:55.635012Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6934: Broken pipe (os error 32)
+2025-09-01T11:05:55.635105Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1185.842885509s ago
+2025-09-01T11:05:59.018040Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6935: Broken pipe (os error 32)
+2025-09-01T11:05:59.018139Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1189.225916839s ago
+2025-09-01T11:06:02.385363Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6936: Broken pipe (os error 32)
+2025-09-01T11:06:02.385460Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1192.593236586s ago
+2025-09-01T11:06:04.997903Z  WARN ops_client::tcp_services::client: Connection failed (attempt 8/10): Network is unreachable (os error 101), retrying in 60s
+2025-09-01T11:06:05.768606Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6937: Broken pipe (os error 32)
+2025-09-01T11:06:05.768705Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1195.976480137s ago
+2025-09-01T11:06:09.150758Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6938: Broken pipe (os error 32)
+2025-09-01T11:06:09.150855Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1199.358634585s ago
+2025-09-01T11:06:12.532708Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6939: Broken pipe (os error 32)
+2025-09-01T11:06:12.532803Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1202.740582113s ago
+2025-09-01T11:06:15.912643Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6940: Broken pipe (os error 32)
+2025-09-01T11:06:15.912741Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1206.120518917s ago
+2025-09-01T11:06:19.292456Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6941: Broken pipe (os error 32)
+2025-09-01T11:06:19.292553Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1209.500328587s ago
+2025-09-01T11:06:22.657277Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6942: Broken pipe (os error 32)
+2025-09-01T11:06:22.657375Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1212.865150744s ago
+2025-09-01T11:06:26.040950Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6943: Broken pipe (os error 32)
+2025-09-01T11:06:26.041048Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1216.248823656s ago
+2025-09-01T11:06:29.421367Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6944: Broken pipe (os error 32)
+2025-09-01T11:06:29.421465Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1219.629241169s ago
+2025-09-01T11:06:32.803110Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6945: Broken pipe (os error 32)
+2025-09-01T11:06:32.803208Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1223.010984351s ago
+2025-09-01T11:06:36.184698Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6946: Broken pipe (os error 32)
+2025-09-01T11:06:36.184796Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1226.392572323s ago
+2025-09-01T11:06:39.548941Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6947: Broken pipe (os error 32)
+2025-09-01T11:06:39.549039Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1229.756817041s ago
+2025-09-01T11:06:42.911052Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6948: Broken pipe (os error 32)
+2025-09-01T11:06:42.911151Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1233.118926638s ago
+2025-09-01T11:06:46.274524Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6949: Broken pipe (os error 32)
+2025-09-01T11:06:46.274620Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1236.482395966s ago
+2025-09-01T11:06:49.653999Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6950: Broken pipe (os error 32)
+2025-09-01T11:06:49.654098Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1239.86187186s ago
+2025-09-01T11:06:53.035305Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6951: Broken pipe (os error 32)
+2025-09-01T11:06:53.035402Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1243.243181579s ago
+2025-09-01T11:06:56.411249Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6952: Broken pipe (os error 32)
+2025-09-01T11:06:56.411344Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1246.619121417s ago
+2025-09-01T11:06:59.776419Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6953: Broken pipe (os error 32)
+2025-09-01T11:06:59.776517Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1249.984292259s ago
+2025-09-01T11:07:03.148052Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6954: Broken pipe (os error 32)
+2025-09-01T11:07:03.148150Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1253.355926143s ago
+2025-09-01T11:07:04.998786Z  WARN ops_client::tcp_services::client: Connection failed (attempt 9/10): Network is unreachable (os error 101), retrying in 60s
+2025-09-01T11:07:06.530290Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6955: Broken pipe (os error 32)
+2025-09-01T11:07:06.530400Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1256.738163743s ago
+2025-09-01T11:07:09.912513Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6956: Broken pipe (os error 32)
+2025-09-01T11:07:09.912611Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1260.12038908s ago
+2025-09-01T11:07:13.296143Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6957: Broken pipe (os error 32)
+2025-09-01T11:07:13.296241Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1263.504015614s ago
+2025-09-01T11:07:16.672639Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6958: Broken pipe (os error 32)
+2025-09-01T11:07:16.672736Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1266.880512831s ago
+2025-09-01T11:07:20.037881Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6959: Broken pipe (os error 32)
+2025-09-01T11:07:20.037978Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1270.245754512s ago
+2025-09-01T11:07:23.417796Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6960: Broken pipe (os error 32)
+2025-09-01T11:07:23.417894Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1273.62567094s ago
+2025-09-01T11:07:26.800258Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6961: Broken pipe (os error 32)
+2025-09-01T11:07:26.800355Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1277.008131078s ago
+2025-09-01T11:07:30.179087Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6962: Broken pipe (os error 32)
+2025-09-01T11:07:30.179184Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1280.386960713s ago
+2025-09-01T11:07:33.559767Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6963: Broken pipe (os error 32)
+2025-09-01T11:07:33.559864Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1283.767639824s ago
+2025-09-01T11:07:36.925269Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6964: Broken pipe (os error 32)
+2025-09-01T11:07:36.925368Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1287.133142585s ago
+2025-09-01T11:07:40.285964Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6965: Broken pipe (os error 32)
+2025-09-01T11:07:40.286062Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1290.493838442s ago
+2025-09-01T11:07:43.663642Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6966: Broken pipe (os error 32)
+2025-09-01T11:07:43.663739Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1293.87151618s ago
+2025-09-01T11:07:47.044422Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6967: Broken pipe (os error 32)
+2025-09-01T11:07:47.044519Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1297.252294806s ago
+2025-09-01T11:07:50.427527Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6968: Broken pipe (os error 32)
+2025-09-01T11:07:50.427627Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1300.635401302s ago
+2025-09-01T11:07:53.806655Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6969: Broken pipe (os error 32)
+2025-09-01T11:07:53.806753Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1304.014526651s ago
+2025-09-01T11:07:57.172105Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6970: Broken pipe (os error 32)
+2025-09-01T11:07:57.172203Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1307.379979614s ago
+2025-09-01T11:08:00.535282Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6971: Broken pipe (os error 32)
+2025-09-01T11:08:00.535378Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1310.74315795s ago
+2025-09-01T11:08:03.915290Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6972: Broken pipe (os error 32)
+2025-09-01T11:08:03.915385Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1314.123162162s ago
+2025-09-01T11:08:05.000049Z  WARN ops_client::tcp_services::client: Connection failed (attempt 10/10): Network is unreachable (os error 101), retrying in 60s
+2025-09-01T11:08:07.297001Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6973: Broken pipe (os error 32)
+2025-09-01T11:08:07.297099Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1317.504875199s ago
+2025-09-01T11:08:10.678494Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6974: Broken pipe (os error 32)
+2025-09-01T11:08:10.678591Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1320.88635369s ago
+2025-09-01T11:08:14.060176Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6975: Broken pipe (os error 32)
+2025-09-01T11:08:14.060274Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1324.268051038s ago
+2025-09-01T11:08:17.425557Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6976: Broken pipe (os error 32)
+2025-09-01T11:08:17.425655Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1327.633431509s ago
+2025-09-01T11:08:20.810815Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6977: Broken pipe (os error 32)
+2025-09-01T11:08:20.810914Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1331.018688725s ago
+2025-09-01T11:08:24.192630Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6978: Broken pipe (os error 32)
+2025-09-01T11:08:24.192727Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1334.400503138s ago
+2025-09-01T11:08:27.569162Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6979: Broken pipe (os error 32)
+2025-09-01T11:08:27.569258Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1337.777034511s ago
+2025-09-01T11:08:30.949137Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6980: Broken pipe (os error 32)
+2025-09-01T11:08:30.949236Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1341.157008915s ago
+2025-09-01T11:08:34.314224Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6981: Broken pipe (os error 32)
+2025-09-01T11:08:34.314337Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1344.522100026s ago
+2025-09-01T11:08:37.676853Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6982: Broken pipe (os error 32)
+2025-09-01T11:08:37.676951Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1347.884724594s ago
+2025-09-01T11:08:41.052386Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6983: Broken pipe (os error 32)
+2025-09-01T11:08:41.052481Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1351.260259486s ago
+2025-09-01T11:08:44.417332Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6984: Broken pipe (os error 32)
+2025-09-01T11:08:44.417428Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1354.62520516s ago
+2025-09-01T11:08:47.799712Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6985: Broken pipe (os error 32)
+2025-09-01T11:08:47.799809Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1358.00758835s ago
+2025-09-01T11:08:51.176868Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6986: Broken pipe (os error 32)
+2025-09-01T11:08:51.176967Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1361.384743445s ago
+2025-09-01T11:08:54.540959Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6987: Broken pipe (os error 32)
+2025-09-01T11:08:54.541061Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1364.748835093s ago
+2025-09-01T11:08:57.901519Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6988: Broken pipe (os error 32)
+2025-09-01T11:08:57.901616Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1368.109393296s ago
+2025-09-01T11:09:01.281962Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6989: Broken pipe (os error 32)
+2025-09-01T11:09:01.282060Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1371.489836232s ago
+2025-09-01T11:09:04.663799Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6990: Broken pipe (os error 32)
+2025-09-01T11:09:04.663895Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1374.871674471s ago
+2025-09-01T11:09:05.000822Z ERROR ops_client::tcp_services::client: Max retry attempts reached for 192.168.4.208:12345: Network is unreachable (os error 101)
+2025-09-01T11:09:05.000883Z ERROR ops_client::tcp_services::client: 重新连接失败，等待后重试
+2025-09-01T11:09:08.046217Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6991: Broken pipe (os error 32)
+2025-09-01T11:09:08.046371Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1378.254092188s ago
+2025-09-01T11:09:10.001870Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-09-01T11:09:10.001990Z  WARN ops_client::tcp_services::client: Connection failed (attempt 1/10): Network is unreachable (os error 101), retrying in 2s
+2025-09-01T11:09:11.426960Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6992: Broken pipe (os error 32)
+2025-09-01T11:09:11.427057Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1381.634836434s ago
+2025-09-01T11:09:12.003069Z  WARN ops_client::tcp_services::client: Connection failed (attempt 2/10): Network is unreachable (os error 101), retrying in 4s
+2025-09-01T11:09:14.810847Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6993: Broken pipe (os error 32)
+2025-09-01T11:09:14.810943Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1385.018719514s ago
+2025-09-01T11:09:16.003897Z  WARN ops_client::tcp_services::client: Connection failed (attempt 3/10): Network is unreachable (os error 101), retrying in 8s
+2025-09-01T11:09:18.191615Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6994: Broken pipe (os error 32)
+2025-09-01T11:09:18.191710Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1388.399488707s ago
+2025-09-01T11:09:21.575581Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6995: Broken pipe (os error 32)
+2025-09-01T11:09:21.575678Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1391.783454906s ago
+2025-09-01T11:09:24.004977Z  WARN ops_client::tcp_services::client: Connection failed (attempt 4/10): Network is unreachable (os error 101), retrying in 16s
+2025-09-01T11:09:24.958596Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6996: Broken pipe (os error 32)
+2025-09-01T11:09:24.958691Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1395.166470527s ago
+2025-09-01T11:09:28.340157Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6997: Broken pipe (os error 32)
+2025-09-01T11:09:28.340258Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1398.548029924s ago
+2025-09-01T11:09:31.706103Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6998: Broken pipe (os error 32)
+2025-09-01T11:09:31.706197Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1401.913976383s ago
+2025-09-01T11:09:35.071774Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #6999: Broken pipe (os error 32)
+2025-09-01T11:09:35.071872Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1405.279647478s ago
+2025-09-01T11:09:38.435885Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #7000: Broken pipe (os error 32)
+2025-09-01T11:09:38.435983Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1408.643762125s ago
+2025-09-01T11:09:40.006411Z  WARN ops_client::tcp_services::client: Connection failed (attempt 5/10): Network is unreachable (os error 101), retrying in 32s
+2025-09-01T11:09:41.816020Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #7001: Broken pipe (os error 32)
+2025-09-01T11:09:41.816118Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1412.023892802s ago
+2025-09-01T11:09:45.194671Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #7002: Broken pipe (os error 32)
+2025-09-01T11:09:45.194766Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1415.402545445s ago
+2025-09-01T11:09:48.574677Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #7003: Broken pipe (os error 32)
+2025-09-01T11:09:48.574774Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1418.782549752s ago
+2025-09-01T11:09:51.940762Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #7004: Broken pipe (os error 32)
+2025-09-01T11:09:51.940859Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1422.148636263s ago
+2025-09-01T11:09:55.304347Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #7005: Broken pipe (os error 32)
+2025-09-01T11:09:55.304443Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1425.51222028s ago
+2025-09-01T11:09:58.682307Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #7006: Broken pipe (os error 32)
+2025-09-01T11:09:58.682420Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1428.890180013s ago
+2025-09-01T11:10:02.048186Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #7007: Broken pipe (os error 32)
+2025-09-01T11:10:02.048281Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1432.256059886s ago
+2025-09-01T11:10:05.425082Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #7008: Broken pipe (os error 32)
+2025-09-01T11:10:05.425179Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1435.63295514s ago
+2025-09-01T11:10:08.805528Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #7009: Broken pipe (os error 32)
+2025-09-01T11:10:08.805627Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1439.013400609s ago
+2025-09-01T11:10:12.171894Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #7010: Broken pipe (os error 32)
+2025-09-01T11:10:12.171991Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1442.379770792s ago
+2025-09-01T11:10:12.172166Z  WARN ops_client::tcp_services::client: Connection failed (attempt 6/10): Network is unreachable (os error 101), retrying in 60s
+2025-09-01T11:10:15.545396Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #7011: Broken pipe (os error 32)
+2025-09-01T11:10:15.545492Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1445.753272053s ago
+2025-09-01T11:10:18.927223Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #7012: Broken pipe (os error 32)
+2025-09-01T11:10:18.927319Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1449.135096069s ago
+2025-09-01T11:10:22.308145Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #7013: Broken pipe (os error 32)
+2025-09-01T11:10:22.308244Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1452.516018999s ago
+2025-09-01T11:10:25.672629Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #7014: Broken pipe (os error 32)
+2025-09-01T11:10:25.672730Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1455.880502545s ago
+2025-09-01T11:10:29.036407Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #7015: Broken pipe (os error 32)
+2025-09-01T11:10:29.036506Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1459.244281825s ago
+2025-09-01T11:10:32.399277Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #7016: Broken pipe (os error 32)
+2025-09-01T11:10:32.399375Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1462.607151025s ago
+2025-09-01T11:10:35.780817Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #7017: Broken pipe (os error 32)
+2025-09-01T11:10:35.780915Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1465.98868994s ago
+2025-09-01T11:10:39.159451Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #7018: Broken pipe (os error 32)
+2025-09-01T11:10:39.159547Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1469.3673245s ago
+2025-09-01T11:10:42.539300Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #7019: Broken pipe (os error 32)
+2025-09-01T11:10:42.539396Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1472.747173003s ago
+2025-09-01T11:10:45.913981Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #7020: Broken pipe (os error 32)
+2025-09-01T11:10:45.914078Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1476.121855646s ago
+2025-09-01T11:10:49.294652Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #7021: Broken pipe (os error 32)
+2025-09-01T11:10:49.294749Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1479.502525264s ago
+2025-09-01T11:10:52.660883Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #7022: Broken pipe (os error 32)
+2025-09-01T11:10:52.660982Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1482.868756133s ago
+2025-09-01T11:10:56.042928Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #7023: Broken pipe (os error 32)
+2025-09-01T11:10:56.043022Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1486.250801793s ago
+2025-09-01T11:10:59.420336Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #7024: Broken pipe (os error 32)
+2025-09-01T11:10:59.420432Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1489.628209659s ago
+2025-09-01T11:11:02.801954Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #7025: Broken pipe (os error 32)
+2025-09-01T11:11:02.802053Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1493.009827705s ago
+2025-09-01T11:11:06.181666Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #7026: Broken pipe (os error 32)
+2025-09-01T11:11:06.181766Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1496.389539277s ago
+2025-09-01T11:11:09.545121Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #7027: Broken pipe (os error 32)
+2025-09-01T11:11:09.545219Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1499.752994979s ago
+2025-09-01T11:11:12.172784Z  WARN ops_client::tcp_services::client: Connection failed (attempt 7/10): Network is unreachable (os error 101), retrying in 60s
+2025-09-01T11:11:12.924864Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #7028: Broken pipe (os error 32)
+2025-09-01T11:11:12.924962Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1503.132738699s ago
+2025-09-01T11:11:16.284869Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #7029: Broken pipe (os error 32)
+2025-09-01T11:11:16.284968Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1506.492743052s ago
+2025-09-01T11:11:19.659763Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #7030: Broken pipe (os error 32)
+2025-09-01T11:11:19.659860Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1509.867637758s ago
+2025-09-01T11:11:23.038561Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #7031: Broken pipe (os error 32)
+2025-09-01T11:11:23.038658Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1513.246433518s ago
+2025-09-01T11:11:26.397703Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #7032: Broken pipe (os error 32)
+2025-09-01T11:11:26.397803Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1516.60557714s ago
+2025-09-01T11:11:29.760348Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #7033: Broken pipe (os error 32)
+2025-09-01T11:11:29.760445Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1519.968223944s ago
+2025-09-01T11:11:33.143204Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #7034: Broken pipe (os error 32)
+2025-09-01T11:11:33.143300Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1523.351078163s ago
+2025-09-01T11:11:36.523815Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #7035: Broken pipe (os error 32)
+2025-09-01T11:11:36.523909Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1526.731689129s ago
+2025-09-01T11:11:39.899971Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #7036: Broken pipe (os error 32)
+2025-09-01T11:11:39.900068Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1530.107847602s ago
+2025-09-01T11:11:43.278419Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #7037: Broken pipe (os error 32)
+2025-09-01T11:11:43.278517Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1533.486281916s ago
+2025-09-01T11:11:46.637472Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #7038: Broken pipe (os error 32)
+2025-09-01T11:11:46.637569Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1536.845347638s ago
+2025-09-01T11:11:50.016532Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #7039: Broken pipe (os error 32)
+2025-09-01T11:11:50.016630Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1540.224406266s ago
+2025-09-01T11:11:53.396786Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #7040: Broken pipe (os error 32)
+2025-09-01T11:11:53.396882Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1543.604660163s ago
+2025-09-01T11:11:56.778019Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #7041: Broken pipe (os error 32)
+2025-09-01T11:11:56.778115Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1546.985894284s ago
+2025-09-01T11:12:00.156993Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #7042: Broken pipe (os error 32)
+2025-09-01T11:12:00.157095Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1550.364865712s ago
+2025-09-01T11:12:03.533160Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #7043: Broken pipe (os error 32)
+2025-09-01T11:12:03.533256Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1553.741036946s ago
+2025-09-01T11:12:06.894632Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #7044: Broken pipe (os error 32)
+2025-09-01T11:12:06.894728Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1557.102504822s ago
+2025-09-01T11:12:10.270822Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #7045: Broken pipe (os error 32)
+2025-09-01T11:12:10.270917Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1560.478694982s ago
+2025-09-01T11:12:12.173689Z  WARN ops_client::tcp_services::client: Connection failed (attempt 8/10): Network is unreachable (os error 101), retrying in 60s
+2025-09-01T11:12:13.651355Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #7046: Broken pipe (os error 32)
+2025-09-01T11:12:13.651449Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1563.859230136s ago
+2025-09-01T11:12:17.034084Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #7047: Broken pipe (os error 32)
+2025-09-01T11:12:17.034180Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1567.241958195s ago
+2025-09-01T11:12:20.409860Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #7048: Broken pipe (os error 32)
+2025-09-01T11:12:20.409956Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1570.617735356s ago
+2025-09-01T11:12:23.770278Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #7049: Broken pipe (os error 32)
+2025-09-01T11:12:23.770394Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1573.978155055s ago
+2025-09-01T11:12:27.132932Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #7050: Broken pipe (os error 32)
+2025-09-01T11:12:27.133027Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1577.340806156s ago
+2025-09-01T11:12:30.511445Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #7051: Broken pipe (os error 32)
+2025-09-01T11:12:30.511540Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1580.719318852s ago
+2025-09-01T11:12:33.888839Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #7052: Broken pipe (os error 32)
+2025-09-01T11:12:33.888933Z  WARN ops_client::tcp_services::client: Connection seems unhealthy, last successful heartbeat was 1584.096713741s ago

@@ -1,0 +1,11 @@
+# OPS客户端配置文件示例
+server_host = "192.168.1.100"
+server_port = 12345
+heartbeat_interval_secs = 5
+retry_max_attempts = 5
+retry_base_delay_secs = 1
+retry_max_delay_secs = 30
+client_id_file = "/tmp/client_id.txt"
+apps_base_dir = "/opt/apps"
+command_log_file = "/var/log/client_commands.log"
+# auth_token = "your-secret-token"

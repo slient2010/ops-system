@@ -1,0 +1,28 @@
+# Ops System 配置示例文件
+# 复制此文件为 config.toml 并根据需要修改
+
+[server]
+# 服务端配置
+tcp_bind_addr = "0.0.0.0"
+http_bind_addr = "0.0.0.0"
+tcp_port = 12345
+http_port = 3000
+cleanup_interval_secs = 60
+client_timeout_secs = 300
+max_connections = 1000
+# API 访问令牌（可选，如果不设置则不启用认证）
+# auth_token = "your-secret-token-here"
+
+[client]
+# 客户端配置
+server_host = "127.0.0.1"
+server_port = 12345
+heartbeat_interval_secs = 3
+retry_max_attempts = 10
+retry_base_delay_secs = 2
+retry_max_delay_secs = 60
+client_id_file = "/tmp/client_id.txt"
+apps_base_dir = "/tmp/apps"
+command_log_file = "/tmp/client_commands.log"
+# 认证令牌（如果服务端启用了认证）
+# auth_token = "your-secret-token-here"

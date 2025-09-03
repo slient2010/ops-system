@@ -1,0 +1,130 @@
+2025-08-31T15:56:29.984373Z  INFO ops_client: Client starting with config: server=127.0.0.1:12345
+2025-08-31T15:56:29.984842Z  WARN ops_client::tcp_services::client: Connection failed (attempt 1/10): Connection refused (os error 111), retrying in 2s
+2025-08-31T15:56:31.986078Z  WARN ops_client::tcp_services::client: Connection failed (attempt 2/10): Connection refused (os error 111), retrying in 4s
+2025-08-31T15:56:42.722340Z  INFO ops_client: Client starting with config: server=192.168.4.208:12345
+2025-08-31T15:56:42.723208Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-08-31T15:56:42.723375Z  INFO ops_client::tcp_services::client: TCP authentication disabled, skipping authentication
+2025-08-31T15:56:42.723633Z  INFO ops_client::tcp_services::client: Starting heartbeat with client ID: 2f9e5c41-b79c-4015-be9b-e27a42c12ab4
+2025-08-31T15:56:42.723760Z  INFO ops_client::tcp_services::client: 消息监听器已启动
+2025-08-31T16:02:25.823401Z  INFO ops_client: Client starting with config: server=192.168.4.208:12345
+2025-08-31T16:02:25.824112Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-08-31T16:02:25.824322Z  INFO ops_client::tcp_services::client: TCP authentication disabled, skipping authentication
+2025-08-31T16:02:25.824654Z  INFO ops_client::tcp_services::client: Starting heartbeat with client ID: 2f9e5c41-b79c-4015-be9b-e27a42c12ab4
+2025-08-31T16:02:25.824693Z  INFO ops_client::tcp_services::client: 消息监听器已启动
+2025-08-31T16:18:46.922772Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #101: Connection timed out (os error 110)
+2025-08-31T16:18:46.922978Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-08-31T16:18:46.923838Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-08-31T16:18:46.923988Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-08-31T16:25:38.918954Z  INFO ops_client: Client starting with config: server=192.168.4.208:12345
+2025-08-31T16:25:38.920272Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-08-31T16:25:38.920438Z  INFO ops_client::tcp_services::client: TCP authentication disabled, skipping authentication
+2025-08-31T16:25:38.920784Z  INFO ops_client::tcp_services::client: Starting heartbeat with client ID: 2f9e5c41-b79c-4015-be9b-e27a42c12ab4
+2025-08-31T16:25:38.920837Z  INFO ops_client::tcp_services::client: 消息监听器已启动
+2025-08-31T16:41:53.418807Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #99: Connection timed out (os error 110)
+2025-08-31T16:41:53.418971Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-08-31T16:41:53.419869Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-08-31T16:41:53.420026Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-08-31T16:58:10.314730Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #198: Connection timed out (os error 110)
+2025-08-31T16:58:10.314847Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-08-31T16:58:10.315607Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-08-31T16:58:10.315717Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-08-31T17:14:35.402603Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #298: Connection timed out (os error 110)
+2025-08-31T17:14:35.402768Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-08-31T17:14:35.403861Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-08-31T17:14:35.403981Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-08-31T17:31:00.490598Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #399: Connection timed out (os error 110)
+2025-08-31T17:31:00.490670Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-08-31T17:31:00.491474Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-08-31T17:31:00.491585Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-08-31T17:47:17.386723Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #498: Connection timed out (os error 110)
+2025-08-31T17:47:17.386846Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-08-31T17:47:17.387514Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-08-31T17:47:17.387624Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-08-31T18:03:42.474670Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #598: Connection timed out (os error 110)
+2025-08-31T18:03:42.474862Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-08-31T18:03:42.475581Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-08-31T18:03:42.475695Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-08-31T18:20:07.566684Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #699: Connection timed out (os error 110)
+2025-08-31T18:20:07.566870Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-08-31T18:20:07.567657Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-08-31T18:20:07.567771Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-08-31T18:36:28.554716Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #799: Connection timed out (os error 110)
+2025-08-31T18:36:28.554890Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-08-31T18:36:28.555823Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-08-31T18:36:28.555945Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-08-31T18:52:45.450687Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #898: Connection timed out (os error 110)
+2025-08-31T18:52:45.450855Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-08-31T18:52:45.451677Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-08-31T18:52:45.451797Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-08-31T19:09:06.442638Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #998: Connection timed out (os error 110)
+2025-08-31T19:09:06.442800Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-08-31T19:09:06.443506Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-08-31T19:09:06.443621Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-08-31T19:25:23.342700Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #1097: Connection timed out (os error 110)
+2025-08-31T19:25:23.342868Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-08-31T19:25:23.343686Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-08-31T19:25:23.343804Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-08-31T19:41:40.238720Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #1196: Connection timed out (os error 110)
+2025-08-31T19:41:40.238881Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-08-31T19:41:40.239576Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-08-31T19:41:40.239690Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-08-31T19:58:05.322691Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #1296: Connection timed out (os error 110)
+2025-08-31T19:58:05.322815Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-08-31T19:58:05.323535Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-08-31T19:58:05.323644Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-08-31T20:14:22.218750Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #1395: Connection timed out (os error 110)
+2025-08-31T20:14:22.218844Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-08-31T20:14:22.219469Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-08-31T20:14:22.219593Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-08-31T20:30:39.114624Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #1494: Connection timed out (os error 110)
+2025-08-31T20:30:39.114726Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-08-31T20:30:39.115361Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-08-31T20:30:39.115472Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-08-31T20:47:04.202662Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #1594: Connection timed out (os error 110)
+2025-08-31T20:47:04.202813Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-08-31T20:47:04.204200Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-08-31T20:47:04.204323Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-08-31T21:03:19.050589Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #1692: Connection timed out (os error 110)
+2025-08-31T21:03:19.050780Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-08-31T21:03:19.051621Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-08-31T21:03:19.051738Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-08-31T21:19:44.138748Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #1792: Connection timed out (os error 110)
+2025-08-31T21:19:44.138800Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-08-31T21:19:44.139611Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-08-31T21:19:44.139775Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-08-31T21:36:09.226943Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #1893: Connection timed out (os error 110)
+2025-08-31T21:36:09.227074Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-08-31T21:36:09.228005Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-08-31T21:36:09.228122Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-08-31T21:52:26.122649Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #1992: Connection timed out (os error 110)
+2025-08-31T21:52:26.122814Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-08-31T21:52:26.123692Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-08-31T21:52:26.123802Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-08-31T22:08:43.022660Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #2091: Connection timed out (os error 110)
+2025-08-31T22:08:43.022746Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-08-31T22:08:43.023487Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-08-31T22:08:43.023599Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-08-31T22:25:08.106811Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #2191: Connection timed out (os error 110)
+2025-08-31T22:25:08.107008Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-08-31T22:25:08.107711Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-08-31T22:25:08.107826Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-08-31T22:41:25.002722Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #2290: Connection timed out (os error 110)
+2025-08-31T22:41:25.002881Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-08-31T22:41:25.003663Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-08-31T22:41:25.003775Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-08-31T22:57:41.898604Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #2389: Connection timed out (os error 110)
+2025-08-31T22:57:41.898719Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-08-31T22:57:41.899574Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-08-31T22:57:41.899693Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-08-31T23:14:02.890562Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #2489: Connection timed out (os error 110)
+2025-08-31T23:14:02.890679Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-08-31T23:14:02.893037Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-08-31T23:14:02.893145Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-08-31T23:30:19.786513Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #2588: Connection timed out (os error 110)
+2025-08-31T23:30:19.786666Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-08-31T23:30:19.787553Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-08-31T23:30:19.787661Z  INFO ops_client::tcp_services::client: 重新连接成功
+2025-08-31T23:46:44.874654Z ERROR ops_client::tcp_services::client: Failed to send heartbeat #2688: Connection timed out (os error 110)
+2025-08-31T23:46:44.874785Z  WARN ops_client::tcp_services::client: 连接断开，尝试重新连接...
+2025-08-31T23:46:44.875562Z  INFO ops_client::tcp_services::client: Successfully connected to 192.168.4.208:12345
+2025-08-31T23:46:44.875674Z  INFO ops_client::tcp_services::client: 重新连接成功
