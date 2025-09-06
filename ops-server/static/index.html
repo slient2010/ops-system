@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>特易行服务管理</title>
+    <title>服务管理</title>
     <style>
         * {
             box-sizing: border-box;
@@ -805,7 +805,7 @@
     <div id="login-container" class="login-container" style="display: none;">
         <div class="login-box">
             <div class="login-header">
-                <h2>🔐 特易行服务管理</h2>
+                <h2>🔐 服务管理</h2>
                 <p>请输入您的登录凭据</p>
             </div>
             <form class="login-form" onsubmit="handleLogin(event)">
@@ -837,7 +837,7 @@
 
     <!-- 主内容区域 -->
     <div id="main-content" class="container" style="display: none;">
-        <h1>特易行服务管理</h1>
+        <h1>服务管理</h1>
         
         <!-- 系统状态概览 -->
         <div class="section">
@@ -1129,7 +1129,7 @@
                 
                 if (result.success) {
                     setAuthenticatedState(result.session_id, username);
-                    showMessage('登录成功，欢迎使用特易行服务管理系统！', 'success');
+                    showMessage('登录成功，欢迎使用服务管理系统！', 'success');
                 } else {
                     errorDiv.textContent = result.message;
                     errorDiv.style.display = 'block';
