@@ -497,6 +497,111 @@ RUST_LOG=debug cargo run --bin ops-client
 
 ---
 
+## 日志轮转功能
+
+OPS系统支持自动日志轮转和压缩功能，以控制日志文件大小并优化磁盘使用。
+
+### 功能特性
+
+- **大小限制** - 日志文件超过指定大小时自动轮转
+- **自动压缩** - 轮转的日志文件自动压缩为 `.tar.gz` 格式
+- **时间戳命名** - 按日期和序列号命名轮转文件
+- **配置灵活** - 支持通过配置文件和环境变量设置
+
+### 配置选项
+
+#### 服务端配置
+
+```toml
+# server-config.toml
+[server]
+# ... 其他配置
+log_rotation_size_mb = 10    # 日志轮转大小（MB），默认10MB
+log_directory = "."          # 日志文件目录，默认当前目录
+```
+
+**环境变量配置：**
+```bash
+export OPS_LOG_ROTATION_SIZE_MB=20      # 服务端日志大小限制（MB）
+export OPS_LOG_DIRECTORY="/var/log/ops" # 服务端日志目录
+```
+
+#### 客户端配置
+
+```toml
+# client-config.toml
+[client]
+# ... 其他配置
+log_rotation_size_mb = 10    # 日志轮转大小（MB），默认10MB
+log_directory = "."          # 日志文件目录，默认当前目录
+```
+
+**环境变量配置：**
+```bash
+export OPS_CLIENT_LOG_ROTATION_SIZE_MB=15    # 客户端日志大小限制（MB）
+export OPS_CLIENT_LOG_DIRECTORY="/var/log"   # 客户端日志目录
+```
+
+### 支持的配置参数
+
+| 配置项 | 环境变量（服务端） | 环境变量（客户端） | 默认值 | 说明 |
+|-------|-------------------|-------------------|--------|------|
+| log_rotation_size_mb | `OPS_LOG_ROTATION_SIZE_MB` | `OPS_CLIENT_LOG_ROTATION_SIZE_MB` | `10` | 日志文件大小限制（MB） |
+| log_directory | `OPS_LOG_DIRECTORY` | `OPS_CLIENT_LOG_DIRECTORY` | `.` | 日志文件存储目录 |
+
+### 轮转文件命名格式
+
+轮转的压缩日志文件采用以下命名格式：
+```
+<日志文件名>.<日期>.<序列号>.tar.gz
+```
+
+**示例：**
+- `web.log.2025-11-07.1.tar.gz`
+- `ops-server.log.2025-11-07.2.tar.gz`
+- `client_commands.log.2025-11-07.1.tar.gz`
+
+### 使用说明
+
+1. **启用日志轮转**
+   - 设置 `log_rotation_size_mb` 为期望的大小限制
+   - 配置 `log_directory` 指定轮转文件的存储位置
+
+2. **轮转机制**
+   - 系统周期性检查日志文件大小
+   - 当文件大小超过配置限制时，自动压缩当前文件
+   - 创建新的日志文件继续写入
+
+3. **压缩格式**
+   - 使用 `.tar.gz` 格式压缩，节省磁盘空间
+   - 保留原始文件名和时间戳信息
+
+4. **序列号管理**
+   - 系统自动管理序列号，避免文件名冲突
+   - 每次轮转时递增序列号
+
+### 最佳实践
+
+1. **合理设置大小限制**
+   ```toml
+   # 根据系统日志量设置合理值
+   log_rotation_size_mb = 50  # 适用于高日志量环境
+   ```
+
+2. **选择合适的存储位置**
+   ```bash
+   export OPS_LOG_DIRECTORY="/var/log/ops-server"   # 服务端专用目录
+   export OPS_CLIENT_LOG_DIRECTORY="/var/log/ops-client" # 客户端专用目录
+   ```
+
+3. **定期清理旧日志**
+   ```bash
+   # 系统管理员可定期清理过期压缩日志
+   find /var/log/ops -name "*.tar.gz" -mtime +30 -delete
+   ```
+
+---
+
 ## 最佳实践
 
 ### 安全建议
