@@ -3,14 +3,21 @@ use std::path::Path;
 use ops_common::{AppInfo, ServiceStatus};
 use tracing::{debug, warn, error};
 use serde_json;
+use std::time::{Duration, SystemTime};
 
 pub struct AppInfoCollector {
     apps_dir: String,
+    last_warning_time: std::sync::Mutex<Option<SystemTime>>,
+    warning_interval: Duration,
 }
 
 impl AppInfoCollector {
     pub fn new(apps_dir: String) -> Self {
-        Self { apps_dir }
+        Self { 
+            apps_dir,
+            last_warning_time: std::sync::Mutex::new(None),
+            warning_interval: Duration::from_secs(300), // 5 minutes between warnings
+        }
     }
 
     /// 读取指定目录下的所有应用信息
@@ -19,8 +26,30 @@ impl AppInfoCollector {
         
         let apps_path = Path::new(&self.apps_dir);
         if !apps_path.exists() || !apps_path.is_dir() {
-            warn!("Apps directory does not exist or is not a directory: {}", self.apps_dir);
+            // Only warn if enough time has passed since the last warning
+            let should_warn = {
+                let last_warning = self.last_warning_time.lock().unwrap();
+                last_warning.map_or(true, |last_time| {
+                    SystemTime::now()
+                        .duration_since(last_time)
+                        .map(|elapsed| elapsed > self.warning_interval)
+                        .unwrap_or(true)
+                })
+            };
+
+            if should_warn {
+                warn!("Apps directory does not exist or is not a directory: {}", self.apps_dir);
+                let mut last_warning = self.last_warning_time.lock().unwrap();
+                *last_warning = Some(SystemTime::now());
+            }
+            
             return apps;
+        }
+
+        // Reset warning time when directory exists
+        {
+            let mut last_warning = self.last_warning_time.lock().unwrap();
+            *last_warning = None;
         }
 
         debug!("Reading apps from directory: {}", self.apps_dir);

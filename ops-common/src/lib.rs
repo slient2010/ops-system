@@ -3,6 +3,7 @@
 pub mod config;
 pub mod security;
 pub mod tcp_auth;
+pub mod log_rotation;
 
 use serde::{ Deserialize, Serialize };
 use std::time::SystemTime;
@@ -29,16 +30,10 @@ impl HostInfo {
             .map(|s| s.to_string_lossy().into_owned())
             .unwrap_or_else(|_| "unknown".to_string());
 
-        // let cpu = sys.cpus().first().cloned().unwrap_or_default();
-        let cpu = sys
-            .cpus()
-            .first()
-            .map(|cpu| cpu);
-        let cpu_model = cpu
-            .as_ref()
-            .map(|c| c.brand().to_string())
-            .unwrap_or_else(|| "unknown".to_string());
-        let cpu_usage = cpu.map(|c| c.cpu_usage()).unwrap_or(0.0);
+        // Get first CPU to avoid multiple lookups
+        let first_cpu = sys.cpus().first();
+        let cpu_model = first_cpu.map(|c| c.brand().to_string()).unwrap_or_else(|| "unknown".to_string());
+        let cpu_usage = first_cpu.map(|c| c.cpu_usage()).unwrap_or(0.0);
 
         let total_memory = sys.total_memory();
         let free_memory = sys.free_memory();

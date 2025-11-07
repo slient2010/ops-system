@@ -115,6 +115,9 @@ impl TcpSession {
 
     pub async fn connect_with_retry(addr: &str, config: &ClientConfig) -> Result<AsyncTcpStream, Box<dyn std::error::Error + Send + Sync>> {
         let mut retry = 0;
+        let mut last_retry_warning = SystemTime::now();
+        let warning_interval = Duration::from_secs(30); // Only log retry attempts every 30 seconds
+        
         loop {
             match Self::create_socket_async(addr).await {
                 Ok(stream) => {
@@ -129,7 +132,18 @@ impl TcpSession {
                     }
                     
                     let delay = (config.retry_base_delay_secs.pow(retry)).min(config.retry_max_delay_secs);
-                    warn!("Connection failed (attempt {}/{}): {}, retrying in {}s", retry, config.retry_max_attempts, e, delay);
+                    let current_time = SystemTime::now();
+                    let time_since_last_warning = current_time.duration_since(last_retry_warning)
+                        .unwrap_or_else(|_| Duration::from_secs(0));
+                    
+                    // Only log retry warning if enough time has passed
+                    if time_since_last_warning >= warning_interval {
+                        warn!("Connection failed (attempt {}/{}): {}, retrying in {}s", retry, config.retry_max_attempts, e, delay);
+                        last_retry_warning = current_time;
+                    } else {
+                        debug!("Connection failed (attempt {}/{}), retrying in {}s", retry, config.retry_max_attempts, delay);
+                    }
+                    
                     tokio::time::sleep(Duration::from_secs(delay)).await;
                 }
             }
@@ -350,6 +364,8 @@ impl TcpSession {
         tokio::spawn(async move {
             let mut heartbeat_count = 0u64;
             let mut last_successful_heartbeat = SystemTime::now();
+            let mut last_health_warning = SystemTime::now();
+            let health_warning_interval = Duration::from_secs(60); // Only warn about health once per minute
             
             loop {
                 heartbeat_count += 1;
@@ -396,14 +412,21 @@ impl TcpSession {
                         debug!("Heartbeat #{} sent successfully", heartbeat_count);
                     }
                     Err(e) => {
-                        error!("Failed to send heartbeat #{}: {}", heartbeat_count, e);
+                        // Only log detailed error if it's not a connection issue that's expected during reconnection
+                        debug!("Failed to send heartbeat #{}: {}", heartbeat_count, e);
                         
-                        // 检查连接健康状态
+                        // 检查连接健康状态 - only warn periodically
                         let time_since_last = current_time.duration_since(last_successful_heartbeat)
                             .unwrap_or_else(|_| Duration::from_secs(0));
                         
                         if time_since_last > Duration::from_secs(30) {
-                            warn!("Connection seems unhealthy, last successful heartbeat was {:?} ago", time_since_last);
+                            let time_since_last_warning = current_time.duration_since(last_health_warning)
+                                .unwrap_or_else(|_| Duration::from_secs(0));
+                            
+                            if time_since_last_warning >= health_warning_interval {
+                                warn!("Connection seems unhealthy, last successful heartbeat was {:?} ago", time_since_last);
+                                last_health_warning = current_time;
+                            }
                         }
                     }
                 }
@@ -472,6 +495,8 @@ impl TcpSession {
     // 在TcpSession结构体中添加消息处理
     pub async fn start_message_listener(&self) {
         let session = self.clone();
+        let mut last_reconnect_warning = SystemTime::now();
+        let reconnect_warning_interval = Duration::from_secs(60); // Only warn about reconnection once per minute
 
         tokio::spawn(async move {
             info!("消息监听器已启动");
@@ -496,19 +521,46 @@ impl TcpSession {
                                 debug!("等待消息超时，继续监听...");
                             }
                             std::io::ErrorKind::UnexpectedEof => {
-                                warn!("连接断开，尝试重新连接...");
+                                let current_time = SystemTime::now();
+                                let time_since_last_warning = current_time.duration_since(last_reconnect_warning)
+                                    .unwrap_or_else(|_| Duration::from_secs(0));
+                                
+                                if time_since_last_warning >= reconnect_warning_interval {
+                                    warn!("连接断开，尝试重新连接...");
+                                    last_reconnect_warning = current_time;
+                                } else {
+                                    debug!("连接断开，尝试重新连接...");
+                                }
+                                
                                 // 尝试重新连接
                                 if let Ok(new_stream) = Self::connect_with_retry(&session.addr, &session.config).await {
                                     let mut guard = session.stream.lock().await;
                                     *guard = new_stream;
                                     info!("重新连接成功");
                                 } else {
-                                    error!("重新连接失败，等待后重试");
+                                    let time_since_last_warning_retry = current_time.duration_since(last_reconnect_warning)
+                                        .unwrap_or_else(|_| Duration::from_secs(0));
+                                    
+                                    if time_since_last_warning_retry >= reconnect_warning_interval {
+                                        error!("重新连接失败，等待后重试");
+                                        last_reconnect_warning = current_time;
+                                    } else {
+                                        debug!("重新连接失败，等待后重试");
+                                    }
                                     tokio::time::sleep(tokio::time::Duration::from_secs(5)).await;
                                 }
                             }
                             _ => {
-                                error!("接收消息错误: {}, 等待后重试", e);
+                                let current_time = SystemTime::now();
+                                let time_since_last_warning = current_time.duration_since(last_reconnect_warning)
+                                    .unwrap_or_else(|_| Duration::from_secs(0));
+                                
+                                if time_since_last_warning >= reconnect_warning_interval {
+                                    error!("接收消息错误: {}, 等待后重试", e);
+                                    last_reconnect_warning = current_time;
+                                } else {
+                                    debug!("接收消息错误: {}, 等待后重试", e);
+                                }
                                 tokio::time::sleep(tokio::time::Duration::from_secs(1)).await;
                             }
                         }
@@ -660,10 +712,19 @@ impl TcpSession {
         }
     }
 
-    // 记录命令到日志文件
+    // 记录命令到日志文件，带大小限制和压缩
     async fn log_command(&self, command: &str) -> std::io::Result<()> {
         use std::io::Write;
         
+        // Check if the log file exceeds the size limit
+        if let Ok(metadata) = std::fs::metadata(&self.config.command_log_file) {
+            let max_size = self.config.log_rotation_size_mb * 1024 * 1024; // Convert MB to bytes
+            if metadata.len() >= max_size {
+                self.rotate_log_file().await?;
+            }
+        }
+        
+        // Open log file and append the command
         let mut file = std::fs::OpenOptions::new()
             .create(true)
             .append(true)
@@ -676,6 +737,108 @@ impl TcpSession {
         file.flush()?;
         
         Ok(())
+    }
+    
+    // Rotate the log file by compressing and creating a new one
+    async fn rotate_log_file(&self) -> std::io::Result<()> {
+        use std::fs;
+        use std::process::Command;
+        
+        // Get current file size before rotation
+        let metadata = fs::metadata(&self.config.command_log_file)?;
+        if metadata.len() == 0 {
+            return Ok(()); // No need to rotate if file is empty
+        }
+        
+        let log_path = std::path::Path::new(&self.config.command_log_file);
+        let log_dir = self.config.log_directory.clone();
+        let log_stem = log_path.file_stem()
+            .unwrap_or(std::ffi::OsStr::new("command"))
+            .to_string_lossy();
+        let log_ext = log_path.extension()
+            .unwrap_or(std::ffi::OsStr::new(""))
+            .to_string_lossy();
+        
+        // Get timestamp for the rotated log
+        let timestamp = chrono::Local::now().format("%Y-%m-%d").to_string();
+        
+        // Find next sequence number to avoid overwriting
+        let sequence_num = self.find_next_sequence_number(&log_stem, &timestamp)?;
+        
+        // Create the compressed filename
+        let compressed_filename = if log_ext.is_empty() {
+            format!("{}.{}.{}.tar.gz", log_stem, timestamp, sequence_num)
+        } else {
+            format!("{}.{}.{}.{}.tar.gz", log_stem, timestamp, sequence_num, log_ext)
+        };
+        
+        let compressed_path = std::path::Path::new(&log_dir).join(&compressed_filename);
+        
+        // Compress the current log file using tar and gzip
+        let tar_result = Command::new("tar")
+            .arg("czf")
+            .arg(&compressed_path)
+            .arg("-C")
+            .arg(log_path.parent().unwrap_or(std::path::Path::new(".")))
+            .arg(log_path.file_name().unwrap_or(std::ffi::OsStr::new("")))
+            .output();
+        
+        match tar_result {
+            Ok(output) => {
+                if output.status.success() {
+                    // Remove the original file after successful compression
+                    fs::remove_file(&self.config.command_log_file)?;
+                    info!("Log file rotated and compressed to: {}", compressed_path.display());
+                } else {
+                    warn!("Failed to compress log file: {}", String::from_utf8_lossy(&output.stderr));
+                    // Still remove the original file if compression failed to prevent infinite loop
+                    let _ = fs::remove_file(&self.config.command_log_file);
+                }
+            }
+            Err(e) => {
+                warn!("Error running tar command for log compression: {}", e);
+                // Remove the original file to prevent infinite loop
+                let _ = fs::remove_file(&self.config.command_log_file);
+            }
+        }
+        
+        Ok(())
+    }
+    
+    // Find the next sequence number to ensure unique filenames
+    fn find_next_sequence_number(&self, stem: &str, timestamp: &str) -> std::io::Result<u32> {
+        use std::fs;
+        
+        let log_dir = std::path::Path::new(&self.config.log_directory);
+        let log_dir = if log_dir.exists() { log_dir } else { std::path::Path::new(".") };
+        
+        let mut max_seq = 0;
+        for entry in fs::read_dir(log_dir)? {
+            let entry = entry?;
+            let filename = entry.file_name();
+            let filename_str = filename.to_string_lossy();
+            
+            if filename_str.starts_with(&format!("{}.", stem)) && filename_str.contains(timestamp) && filename_str.contains(".tar.gz") {
+                // Extract sequence number from filename like log_file.2025-11-01.1.tar.gz
+                if let Some(pos) = filename_str.find(timestamp) {
+                    let after_timestamp = &filename_str[pos + timestamp.len() + 1..];
+                    if let Some(dot_pos) = after_timestamp.find(".tar.gz") {
+                        let before_ext = &after_timestamp[..dot_pos];
+                        // Now look for the sequence number - it should be after the timestamp
+                        let parts: Vec<&str> = before_ext.split('.').collect();
+                        if let Some(seq_part) = parts.last() {
+                            if let Ok(seq) = seq_part.parse::<u32>() {
+                                if seq > max_seq {
+                                    max_seq = seq;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        Ok(max_seq + 1)
     }
 
     // 安全地执行命令

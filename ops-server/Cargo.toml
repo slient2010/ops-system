@@ -16,7 +16,9 @@ tracing = "0.1"
 tracing-subscriber = { version = "0.3", features = ["env-filter", "fmt", "std"] }
 tracing-appender = "0.2"
 uuid = { version = "1.17.0", features = ["v4"] }
-chrono = { version = "0.4", features = ["serde"] }
+chrono = { workspace = true }
+flate2 = { workspace = true }
+tar = { workspace = true }
 
 [dev-dependencies]
 axum-test = "18.0"

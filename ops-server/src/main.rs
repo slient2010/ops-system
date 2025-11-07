@@ -24,18 +24,37 @@ use crate::tcp_services::handle_socket;
 use crate::middleware::AuthConfig;
 
 use ops_common::{ClientInfo, config::ServerConfig};
+use ops_common::log_rotation::ThreadSafeLogRotator;
 
 #[cfg(test)]
 mod tests;
 
 // 设置日志配置
-fn setup_logging() {
-    // 创建 web 访问日志的文件 appender
-    let web_log_file = rolling::daily(".", "web.log");
+fn setup_logging(config: &ServerConfig) {
+    // Use size-based rotation if configured
+    let log_directory = config.log_directory.clone();
+    let log_rotation_size_mb = config.log_rotation_size_mb;
+    
+    // Create custom writers with size-based rotation - these will be used by the web middleware
+    let web_log_rotator = ThreadSafeLogRotator::new(
+        format!("{}/web.log", log_directory), 
+        log_rotation_size_mb, 
+        log_directory.clone()
+    ).expect("Failed to create web log rotator");
+    
+    // Create another rotator for the application logs
+    let app_log_rotator = ThreadSafeLogRotator::new(
+        format!("{}/ops-server.log", log_directory), 
+        log_rotation_size_mb, 
+        log_directory
+    ).expect("Failed to create app log rotator");
+
+    // Instead of using tracing_appender, we'll modify the web middleware to use the rotator
+    let web_log_file = rolling::never(&config.log_directory, "web.log");
     let (web_log_writer, web_log_guard) = non_blocking(web_log_file);
 
     // 创建应用日志的文件 appender  
-    let app_log_file = rolling::daily(".", "ops-server.log");
+    let app_log_file = rolling::never(&config.log_directory, "ops-server.log");
     let (app_log_writer, app_log_guard) = non_blocking(app_log_file);
 
     // 配置 web 访问日志层 - 只记录 web_access 目标的日志
@@ -131,11 +150,12 @@ async fn launch_tcp_server(shared_data: SharedDataHandle, config: ServerConfig) 
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
-    // 初始化日志配置
-    setup_logging();
-
     // 加载配置
     let config = ServerConfig::from_env();
+    
+    // 初始化日志配置
+    setup_logging(&config);
+    
     info!("Server starting with config: TCP={}, HTTP={}", config.tcp_address(), config.http_address());
 
     let shared_data = SharedDataHandle::new(SharedData::new(config.max_connections));

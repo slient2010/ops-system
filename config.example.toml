@@ -12,6 +12,9 @@ client_timeout_secs = 300
 max_connections = 1000
 # API 访问令牌（可选，如果不设置则不启用认证）
 # auth_token = "your-secret-token-here"
+# 日志轮转配置
+log_rotation_size_mb = 10  # 日志轮转大小（MB）
+log_directory = "."         # 日志文件目录
 
 [client]
 # 客户端配置
@@ -26,3 +29,6 @@ apps_base_dir = "/tmp/apps"
 command_log_file = "/tmp/client_commands.log"
 # 认证令牌（如果服务端启用了认证）
 # auth_token = "your-secret-token-here"
+# 日志轮转配置
+log_rotation_size_mb = 10  # 日志轮转大小（MB）
+log_directory = "."         # 日志文件目录

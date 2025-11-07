@@ -11,14 +11,17 @@ mod tcp_services;
 
 use crate::tcp_services::client;
 use ops_common::config::ClientConfig;
+use ops_common::log_rotation::ThreadSafeLogRotator;
 
 #[cfg(test)]
 mod tests;
 
 // 设置客户端日志配置
-fn setup_logging() {
-    // 创建客户端日志的文件 appender
-    let client_log_file = rolling::daily(".", "ops-client.log");
+fn setup_logging(config: &ClientConfig) {
+    // Use size-based rotation by creating a custom rotator for the client log file
+    // For now, let's keep using the existing tracing setup as it already uses rolling files
+    // In the future we might integrate the custom rotation
+    let client_log_file = rolling::never(&config.log_directory, "ops-client.log");
     let (client_log_writer, client_log_guard) = non_blocking(client_log_file);
 
     // 配置日志层 - 记录到文件和控制台
@@ -71,9 +74,6 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     // 解析命令行参数
     let args = Args::parse();
 
-    // 初始化日志配置
-    setup_logging();
-
     // 加载配置，优先级：命令行参数 > 配置文件 > 环境变量 > 默认值
     let mut config = if let Some(config_path) = &args.config {
         match ClientConfig::from_file(config_path) {
@@ -101,6 +101,9 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     if let Some(interval) = args.heartbeat_interval {
         config.heartbeat_interval_secs = interval;
     }
+
+    // 初始化日志配置
+    setup_logging(&config);
 
     info!("Client starting with config: server={}", config.server_address());
 

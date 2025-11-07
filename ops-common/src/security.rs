@@ -480,15 +480,6 @@ impl CommandValidator {
             };
         }
 
-        // 允许的应用管理操作模式
-        let allowed_patterns = vec![
-            r"cd /tmp/apps/[\w\-]+ && bash [\w\-]+\.sh (start|stop|status|update)",
-            r"cd /tmp/apps/[\w\-]+ && if \[ -f [\w\-]+\.pid \]",
-            r"kill \$\(cat [\w\-]+\.pid\)",
-            r"rm -f [\w\-]+\.pid",
-            r"ps -p \$pid",
-        ];
-
         // 简化验证：检查关键词
         let has_valid_pattern = 
             (command.contains("bash") && command.contains(".sh")) ||

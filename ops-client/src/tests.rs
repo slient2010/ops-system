@@ -11,16 +11,20 @@ mod tests {
 
     #[test]
     fn test_client_config_from_env() {
-        std::env::set_var("OPS_SERVER_HOST", "test-server");
-        std::env::set_var("OPS_SERVER_PORT", "9999");
+        unsafe {
+            std::env::set_var("OPS_SERVER_HOST", "test-server");
+            std::env::set_var("OPS_SERVER_PORT", "9999");
+        }
         
         let config = ClientConfig::from_env();
         assert_eq!(config.server_host, "test-server");
         assert_eq!(config.server_port, 9999);
         
         // 清理环境变量
-        std::env::remove_var("OPS_SERVER_HOST");
-        std::env::remove_var("OPS_SERVER_PORT");
+        unsafe {
+            std::env::remove_var("OPS_SERVER_HOST");
+            std::env::remove_var("OPS_SERVER_PORT");
+        }
     }
 
     #[test]

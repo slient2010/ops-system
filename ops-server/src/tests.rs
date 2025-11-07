@@ -19,7 +19,7 @@ mod tests {
     async fn test_health_check() {
         let shared_data = create_test_shared_data();
         let auth_config = AuthConfig::new(None);
-        let app = crate::web::routes::routes(shared_data, auth_config);
+        let (app, _session_store) = crate::web::routes::routes(shared_data, auth_config);
         let server = TestServer::new(app).unwrap();
 
         let response = server.get("/health").await;
@@ -34,7 +34,7 @@ mod tests {
     async fn test_auth_middleware_without_token() {
         let shared_data = create_test_shared_data();
         let auth_config = AuthConfig::new(None); // 认证未启用
-        let app = crate::web::routes::routes(shared_data, auth_config);
+        let (app, _session_store) = crate::web::routes::routes(shared_data, auth_config);
         let server = TestServer::new(app).unwrap();
 
         let response = server.get("/api/clients").await;
@@ -45,7 +45,7 @@ mod tests {
     async fn test_auth_middleware_with_valid_token() {
         let shared_data = create_test_shared_data();
         let auth_config = AuthConfig::new(Some("test-token".to_string()));
-        let app = crate::web::routes::routes(shared_data, auth_config);
+        let (app, _session_store) = crate::web::routes::routes(shared_data, auth_config);
         let server = TestServer::new(app).unwrap();
 
         let response = server
@@ -60,7 +60,7 @@ mod tests {
     async fn test_auth_middleware_with_invalid_token() {
         let shared_data = create_test_shared_data();
         let auth_config = AuthConfig::new(Some("test-token".to_string()));
-        let app = crate::web::routes::routes(shared_data, auth_config);
+        let (app, _session_store) = crate::web::routes::routes(shared_data, auth_config);
         let server = TestServer::new(app).unwrap();
 
         let response = server
@@ -75,7 +75,7 @@ mod tests {
     async fn test_auth_middleware_missing_header() {
         let shared_data = create_test_shared_data();
         let auth_config = AuthConfig::new(Some("test-token".to_string()));
-        let app = crate::web::routes::routes(shared_data, auth_config);
+        let (app, _session_store) = crate::web::routes::routes(shared_data, auth_config);
         let server = TestServer::new(app).unwrap();
 
         let response = server.get("/api/clients").await;
@@ -86,7 +86,7 @@ mod tests {
     async fn test_broadcast_message() {
         let shared_data = create_test_shared_data();
         let auth_config = AuthConfig::new(None);
-        let app = crate::web::routes::routes(shared_data, auth_config);
+        let (app, _session_store) = crate::web::routes::routes(shared_data, auth_config);
         let server = TestServer::new(app).unwrap();
 
         let payload = json!({
@@ -107,7 +107,7 @@ mod tests {
     async fn test_send_command() {
         let shared_data = create_test_shared_data();
         let auth_config = AuthConfig::new(None);
-        let app = crate::web::routes::routes(shared_data, auth_config);
+        let (app, _session_store) = crate::web::routes::routes(shared_data, auth_config);
         let server = TestServer::new(app).unwrap();
 
         let payload = json!({
@@ -128,7 +128,7 @@ mod tests {
     async fn test_cors_headers() {
         let shared_data = create_test_shared_data();
         let auth_config = AuthConfig::new(None);
-        let app = crate::web::routes::routes(shared_data, auth_config);
+        let (app, _session_store) = crate::web::routes::routes(shared_data, auth_config);
         let server = TestServer::new(app).unwrap();
 
         let response = server.get("/health").await;

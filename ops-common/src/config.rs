@@ -3,6 +3,26 @@ use std::env;
 use std::fs;
 use std::path::Path;
 
+// Helper function to parse environment variables with defaults
+fn parse_env_var<T>(var_name: &str, default: T) -> T
+where
+    T: std::str::FromStr,
+{
+    env::var(var_name)
+        .ok()
+        .and_then(|val| val.parse().ok())
+        .unwrap_or(default)
+}
+
+// Helper function to parse comma-separated environment variables with defaults
+fn parse_env_list(var_name: &str, default: &str) -> Vec<String> {
+    env::var(var_name)
+        .unwrap_or_else(|_| default.to_string())
+        .split(',')
+        .map(|s| s.trim().to_string())
+        .collect()
+}
+
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct ServerConfig {
     pub tcp_bind_addr: String,
@@ -15,6 +35,8 @@ pub struct ServerConfig {
     pub auth_token: Option<String>,
     pub allowed_script_dirs: Vec<String>, // 允许执行脚本的目录
     pub allowed_script_extensions: Vec<String>, // 允许的脚本扩展名
+    pub log_rotation_size_mb: u64, // 日志轮转大小（MB）
+    pub log_directory: String, // 日志目录
 }
 
 impl Default for ServerConfig {
@@ -39,6 +61,8 @@ impl Default for ServerConfig {
                 "pl".to_string(),
                 "rb".to_string(),
             ],
+            log_rotation_size_mb: 10, // 默认10MB
+            log_directory: ".".to_string(), // 默认当前目录
         }
     }
 }
@@ -46,39 +70,18 @@ impl Default for ServerConfig {
 impl ServerConfig {
     pub fn from_env() -> Self {
         Self {
-            tcp_bind_addr: env::var("OPS_TCP_BIND_ADDR").unwrap_or_else(|_| "0.0.0.0".to_string()),
-            http_bind_addr: env::var("OPS_HTTP_BIND_ADDR").unwrap_or_else(|_| "0.0.0.0".to_string()),
-            tcp_port: env::var("OPS_TCP_PORT")
-                .unwrap_or_else(|_| "12345".to_string())
-                .parse()
-                .unwrap_or(12345),
-            http_port: env::var("OPS_HTTP_PORT")
-                .unwrap_or_else(|_| "3000".to_string())
-                .parse()
-                .unwrap_or(3000),
-            cleanup_interval_secs: env::var("OPS_CLEANUP_INTERVAL")
-                .unwrap_or_else(|_| "60".to_string())
-                .parse()
-                .unwrap_or(60),
-            client_timeout_secs: env::var("OPS_CLIENT_TIMEOUT")
-                .unwrap_or_else(|_| "300".to_string())
-                .parse()
-                .unwrap_or(300),
-            max_connections: env::var("OPS_MAX_CONNECTIONS")
-                .unwrap_or_else(|_| "1000".to_string())
-                .parse()
-                .unwrap_or(1000),
+            tcp_bind_addr: parse_env_var("OPS_TCP_BIND_ADDR", "0.0.0.0".to_string()),
+            http_bind_addr: parse_env_var("OPS_HTTP_BIND_ADDR", "0.0.0.0".to_string()),
+            tcp_port: parse_env_var("OPS_TCP_PORT", 12345u16),
+            http_port: parse_env_var("OPS_HTTP_PORT", 3000u16),
+            cleanup_interval_secs: parse_env_var("OPS_CLEANUP_INTERVAL", 60u64),
+            client_timeout_secs: parse_env_var("OPS_CLIENT_TIMEOUT", 300u64),
+            max_connections: parse_env_var("OPS_MAX_CONNECTIONS", 1000usize),
             auth_token: env::var("OPS_AUTH_TOKEN").ok(),
-            allowed_script_dirs: env::var("OPS_ALLOWED_SCRIPT_DIRS")
-                .unwrap_or_else(|_| "/opt/ops-scripts,/usr/local/bin/scripts,/home/ops/scripts".to_string())
-                .split(',')
-                .map(|s| s.trim().to_string())
-                .collect(),
-            allowed_script_extensions: env::var("OPS_ALLOWED_SCRIPT_EXTENSIONS")
-                .unwrap_or_else(|_| "sh,py,pl,rb".to_string())
-                .split(',')
-                .map(|s| s.trim().to_string())
-                .collect(),
+            allowed_script_dirs: parse_env_list("OPS_ALLOWED_SCRIPT_DIRS", "/opt/ops-scripts,/usr/local/bin/scripts,/home/ops/scripts"),
+            allowed_script_extensions: parse_env_list("OPS_ALLOWED_SCRIPT_EXTENSIONS", "sh,py,pl,rb"),
+            log_rotation_size_mb: parse_env_var("OPS_LOG_ROTATION_SIZE_MB", 10u64),
+            log_directory: env::var("OPS_LOG_DIRECTORY").unwrap_or_else(|_| ".".to_string()),
         }
     }
 
@@ -109,6 +112,8 @@ pub struct ClientConfig {
     pub apps_base_dir: String,
     pub command_log_file: String,
     pub auth_token: Option<String>,
+    pub log_rotation_size_mb: u64, // 日志轮转大小（MB）
+    pub log_directory: String,     // 日志目录
 }
 
 impl Default for ClientConfig {
@@ -124,6 +129,8 @@ impl Default for ClientConfig {
             apps_base_dir: "/tmp/apps".to_string(),
             command_log_file: "/tmp/client_commands.log".to_string(),
             auth_token: None,
+            log_rotation_size_mb: 10, // 默认10MB
+            log_directory: ".".to_string(), // 默认当前目录
         }
     }
 }
@@ -159,6 +166,8 @@ impl ClientConfig {
             command_log_file: env::var("OPS_COMMAND_LOG_FILE")
                 .unwrap_or_else(|_| "/tmp/client_commands.log".to_string()),
             auth_token: env::var("OPS_AUTH_TOKEN").ok(),
+            log_rotation_size_mb: parse_env_var("OPS_CLIENT_LOG_ROTATION_SIZE_MB", 10u64),
+            log_directory: env::var("OPS_CLIENT_LOG_DIRECTORY").unwrap_or_else(|_| ".".to_string()),
         }
     }
 
@@ -187,16 +196,20 @@ mod tests {
 
     #[test]
     fn test_client_config_from_env() {
-        env::set_var("OPS_SERVER_HOST", "test-server");
-        env::set_var("OPS_SERVER_PORT", "9999");
+        unsafe {
+            env::set_var("OPS_SERVER_HOST", "test-server");
+            env::set_var("OPS_SERVER_PORT", "9999");
+        }
         
         let config = ClientConfig::from_env();
         assert_eq!(config.server_host, "test-server");
         assert_eq!(config.server_port, 9999);
         
         // 清理环境变量
-        env::remove_var("OPS_SERVER_HOST");
-        env::remove_var("OPS_SERVER_PORT");
+        unsafe {
+            env::remove_var("OPS_SERVER_HOST");
+            env::remove_var("OPS_SERVER_PORT");
+        }
     }
 
     #[test]
