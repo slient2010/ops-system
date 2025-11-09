@@ -44,15 +44,20 @@ impl LogRotator {
 
     /// Write data to the log file, rotating if necessary
     pub fn write(&mut self, data: &[u8]) -> Result<(), io::Error> {
-        let new_size = self.file_size + data.len() as u64;
+        // Only check rotation if we have data to write
+        if !data.is_empty() {
+            let new_size = self.file_size + data.len() as u64;
 
-        if new_size > self.max_size {
-            self.rotate_log()?;
+            if new_size > self.max_size {
+                self.rotate_log()?;
+            }
         }
 
         // Write the data
         if let Some(ref mut file) = self.file {
             file.write_all(data)?;
+            // Only flush periodically to improve performance, or when rotating
+            // For now, keeping flush for consistency but could be optimized further
             file.flush()?;
             self.file_size += data.len() as u64;
         }
@@ -183,8 +188,15 @@ impl ThreadSafeLogRotator {
     }
 
     pub fn write(&self, data: &[u8]) -> Result<(), io::Error> {
-        let mut rotator = self.inner.lock().unwrap();
-        rotator.write(data)
+        // Handle potential poisoning of the mutex
+        match self.inner.lock() {
+            Ok(mut guard) => guard.write(data),
+            Err(poisoned) => {
+                // If the mutex was poisoned (due to a panic in another thread), try to recover
+                let mut guard = poisoned.into_inner();
+                guard.write(data)
+            }
+        }
     }
 }
 
@@ -232,5 +244,50 @@ mod tests {
         rotator.write(&large_data).unwrap();
         
         handle.join().unwrap();
+    }
+
+    #[test]
+    fn test_log_rotation_with_writer() {
+        use std::io::Write;
+        
+        let dir = tempdir().unwrap();
+        let log_path = dir.path().join("test_writer.log");
+        let log_dir = dir.path().to_string_lossy().to_string();
+
+        // Create a thread-safe rotator
+        let rotator = ThreadSafeLogRotator::new(&log_path, 1, log_dir).unwrap(); // 1MB limit
+        
+        // Create a writer wrapper similar to what's used in the main application
+        struct LogRotatorWriter {
+            rotator: ThreadSafeLogRotator,
+        }
+
+        impl LogRotatorWriter {
+            fn new(rotator: ThreadSafeLogRotator) -> Self {
+                Self { rotator }
+            }
+        }
+
+        impl std::io::Write for LogRotatorWriter {
+            fn write(&mut self, buf: &[u8]) -> std::io::Result<usize> {
+                self.rotator.write(buf)?;
+                Ok(buf.len())
+            }
+
+            fn flush(&mut self) -> std::io::Result<()> {
+                Ok(())
+            }
+        }
+
+        let mut writer = LogRotatorWriter::new(rotator);
+        
+        // Write a message that should be logged
+        let message = "Test log message
+";
+        writer.write_all(message.as_bytes()).unwrap();
+        
+        // Verify the log file was created and contains the message
+        let log_content = std::fs::read_to_string(&log_path).unwrap();
+        assert!(log_content.contains("Test log message"));
     }
 }

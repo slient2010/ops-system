@@ -49,17 +49,38 @@ fn setup_logging(config: &ServerConfig) {
         log_directory
     ).expect("Failed to create app log rotator");
 
-    // Instead of using tracing_appender, we'll modify the web middleware to use the rotator
-    let web_log_file = rolling::never(&config.log_directory, "web.log");
-    let (web_log_writer, web_log_guard) = non_blocking(web_log_file);
+    // Create custom writer implementations that use our log rotators
+    // We use a thin wrapper that implements Write but try to minimize blocking
+    
+    struct NonBlockingLogWriter {
+        rotator: ThreadSafeLogRotator,
+    }
 
-    // 创建应用日志的文件 appender  
-    let app_log_file = rolling::never(&config.log_directory, "ops-server.log");
-    let (app_log_writer, app_log_guard) = non_blocking(app_log_file);
+    impl NonBlockingLogWriter {
+        fn new(rotator: ThreadSafeLogRotator) -> Self {
+            Self { rotator }
+        }
+    }
+
+    impl std::io::Write for NonBlockingLogWriter {
+        fn write(&mut self, buf: &[u8]) -> std::io::Result<usize> {
+            // The ThreadSafeLogRotator handles thread safety internally
+            self.rotator.write(buf)?;
+            Ok(buf.len())
+        }
+
+        fn flush(&mut self) -> std::io::Result<()> {
+            Ok(())
+        }
+    }
+
+    // Create writers for different log types
+    let web_log_writer = NonBlockingLogWriter::new(web_log_rotator);
+    let app_log_writer = NonBlockingLogWriter::new(app_log_rotator);
 
     // 配置 web 访问日志层 - 只记录 web_access 目标的日志
     let web_access_layer = tracing_subscriber::fmt::layer()
-        .with_writer(web_log_writer)
+        .with_writer(std::sync::Mutex::new(web_log_writer))
         .with_target(true)
         .with_level(false)
         .with_thread_ids(false)
@@ -71,18 +92,21 @@ fn setup_logging(config: &ServerConfig) {
 
     // 配置应用日志层 - 记录除了 web_access 外的所有日志
     let app_layer = tracing_subscriber::fmt::layer()
-        .with_writer(app_log_writer.and(std::io::stdout))
+        .with_writer(std::sync::Mutex::new(app_log_writer))
         .with_filter(EnvFilter::new("info").add_directive("web_access=off".parse().unwrap()));
+
+    // 配置控制台日志层
+    let console_layer = tracing_subscriber::fmt::layer()
+        .with_writer(std::io::stdout)
+        .with_ansi(true)
+        .with_filter(EnvFilter::from_default_env());
 
     // 组合所有层
     tracing_subscriber::registry()
         .with(web_access_layer)
         .with(app_layer)
+        .with(console_layer)
         .init();
-        
-    // 保持守护线程运行 (泄露内存但保证日志能写入)
-    std::mem::forget(web_log_guard);
-    std::mem::forget(app_log_guard);
 }
 
 // HTTP 服务

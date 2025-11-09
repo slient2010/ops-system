@@ -18,15 +18,47 @@ mod tests;
 
 // 设置客户端日志配置
 fn setup_logging(config: &ClientConfig) {
-    // Use size-based rotation by creating a custom rotator for the client log file
-    // For now, let's keep using the existing tracing setup as it already uses rolling files
-    // In the future we might integrate the custom rotation
-    let client_log_file = rolling::never(&config.log_directory, "ops-client.log");
-    let (client_log_writer, client_log_guard) = non_blocking(client_log_file);
+    // Use size-based rotation if configured
+    let log_directory = config.log_directory.clone();
+    let log_rotation_size_mb = config.log_rotation_size_mb;
 
-    // 配置日志层 - 记录到文件和控制台
+    // Create a custom writer with size-based rotation
+    let client_log_rotator = ThreadSafeLogRotator::new(
+        format!("{}/ops-client.log", log_directory),
+        log_rotation_size_mb,
+        log_directory
+    ).expect("Failed to create client log rotator");
+
+    // Create custom writer implementation that uses our log rotator
+    // We use a thin wrapper that implements Write but try to minimize blocking
+    struct NonBlockingLogWriter {
+        rotator: ThreadSafeLogRotator,
+    }
+
+    impl NonBlockingLogWriter {
+        fn new(rotator: ThreadSafeLogRotator) -> Self {
+            Self { rotator }
+        }
+    }
+
+    impl std::io::Write for NonBlockingLogWriter {
+        fn write(&mut self, buf: &[u8]) -> std::io::Result<usize> {
+            // The ThreadSafeLogRotator handles thread safety internally
+            self.rotator.write(buf)?;
+            Ok(buf.len())
+        }
+
+        fn flush(&mut self) -> std::io::Result<()> {
+            Ok(())
+        }
+    }
+
+    // Wrap the rotator in writer struct for tracing
+    let client_log_writer = NonBlockingLogWriter::new(client_log_rotator);
+
+    // 配置日志层 - 记录到文件
     let file_layer = tracing_subscriber::fmt::layer()
-        .with_writer(client_log_writer)
+        .with_writer(std::sync::Mutex::new(client_log_writer))
         .with_target(true)
         .with_ansi(false)
         .with_filter(EnvFilter::new("info"));
@@ -42,10 +74,8 @@ fn setup_logging(config: &ClientConfig) {
         .with(file_layer)
         .with(console_layer)
         .init();
-        
-    // 保持守护线程运行
-    std::mem::forget(client_log_guard);
 }
+
 
 #[derive(Parser, Debug)]
 #[command(name = "ops-client")]

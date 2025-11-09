@@ -1252,6 +1252,7 @@
         // 更新客户端列表显示
         function updateClientsList(clients) {
             const clientsContainer = document.getElementById('clients');
+            if (!clientsContainer) return;  // Exit if element doesn't exist
             clientsContainer.innerHTML = '';
             
             if (Object.keys(clients).length === 0) {
@@ -1296,7 +1297,8 @@
         // 更新客户端选择下拉框
         function updateClientSelect(clients) {
             const clientSelect = document.getElementById('client-select');
-            const currentValue = clientSelect.value;
+            if (!clientSelect) return;  // Exit if element doesn't exist
+            const currentValue = clientSelect.value || '';
             
             // 保留第一个默认选项
             clientSelect.innerHTML = '<option value="">-- 选择客户端 --</option>';
@@ -1521,6 +1523,7 @@
         // 添加到命令历史
         function addToHistory(clientId, command) {
             const historyContainer = document.getElementById('command-history');
+            if (!historyContainer) return;  // Exit if element doesn't exist
             
             // 如果是第一个命令，清空默认文本
             if (historyContainer.textContent.includes('暂无历史记录')) {
@@ -1528,17 +1531,19 @@
             }
             
             const historyItem = document.createElement('div');
-            historyItem.className = 'history-item';
-            historyItem.innerHTML = `
-                <div><strong>[${new Date().toLocaleTimeString()}]</strong> ${command}</div>
-                <div>目标: ${clientId.substring(0, 8)}... <button onclick="repeatCommand('${clientId}', '${command}')" style="font-size: 10px; padding: 2px 5px;">重复执行</button></div>
-            `;
-            
-            historyContainer.insertBefore(historyItem, historyContainer.firstChild);
-            
-            // 限制历史记录数量
-            while (historyContainer.children.length > 10) {
-                historyContainer.removeChild(historyContainer.lastChild);
+            if (historyItem) {
+                historyItem.className = 'history-item';
+                historyItem.innerHTML = `
+                    <div><strong>[${new Date().toLocaleTimeString()}]</strong> ${command}</div>
+                    <div>目标: ${clientId.substring(0, 8)}... <button onclick="repeatCommand('${clientId}', '${command}')" style="font-size: 10px; padding: 2px 5px;">重复执行</button></div>
+                `;
+                
+                historyContainer.insertBefore(historyItem, historyContainer.firstChild);
+                
+                // 限制历史记录数量
+                while (historyContainer.children.length > 10) {
+                    historyContainer.removeChild(historyContainer.lastChild);
+                }
             }
         }
         
@@ -1722,33 +1727,54 @@
         
         // 更新预定义命令UI
         function updatePredefinedCommandsUI() {
-            // 更新命令选择下拉框
-            const select = document.getElementById('predefined-select');
-            select.innerHTML = '<option value="">-- 选择预定义命令 --</option>';
-            
-            predefinedCommands.forEach((cmd, index) => {
-                const option = document.createElement('option');
-                option.value = index;
-                option.textContent = `[${cmd.category}] ${cmd.name}`;
-                select.appendChild(option);
-            });
-            
-            // 更新类别筛选下拉框
-            const categories = [...new Set(allPredefinedCommands.map(cmd => cmd.category))];
-            const categorySelect = document.getElementById('category-filter');
-            categorySelect.innerHTML = '<option value="">所有类别</option>';
-            
-            categories.forEach(category => {
-                const option = document.createElement('option');
-                option.value = category;
-                option.textContent = category;
-                categorySelect.appendChild(option);
-            });
+            try {
+                // 更新命令选择下拉框
+                const select = document.getElementById('predefined-select');
+                if (select) {
+                    select.innerHTML = '<option value="">-- 选择预定义命令 --</option>';
+                    
+                    // 确保 predefinedCommands 存在且为数组
+                    if (predefinedCommands && Array.isArray(predefinedCommands)) {
+                        predefinedCommands.forEach((cmd, index) => {
+                            const option = document.createElement('option');
+                            if (option) {
+                                option.value = index;
+                                option.textContent = `[${cmd.category}] ${cmd.name}`;
+                                select.appendChild(option);
+                            }
+                        });
+                    }
+                }
+                
+                // 更新类别筛选下拉框 (only if it exists in the DOM)
+                // 确保 allPredefinedCommands 存在且为数组
+                if (allPredefinedCommands && Array.isArray(allPredefinedCommands)) {
+                    const categories = [...new Set(allPredefinedCommands.map(cmd => cmd.category))];
+                    const categorySelect = document.getElementById('category-filter');
+                    if (categorySelect) {
+                        categorySelect.innerHTML = '<option value="">所有类别</option>';
+                        
+                        categories.forEach(category => {
+                            const option = document.createElement('option');
+                            if (option) {
+                                option.value = category;
+                                option.textContent = category;
+                                categorySelect.appendChild(option);
+                            }
+                        });
+                    }
+                }
+            } catch (error) {
+                console.error('Error in updatePredefinedCommandsUI:', error);
+            }
         }
         
         // 按类别筛选命令
         function filterCommandsByCategory() {
-            const selectedCategory = document.getElementById('category-filter').value;
+            const categorySelect = document.getElementById('category-filter');
+            if (!categorySelect) return;  // Exit if element doesn't exist
+            
+            const selectedCategory = categorySelect.value;
             
             if (selectedCategory) {
                 predefinedCommands = allPredefinedCommands.filter(cmd => cmd.category === selectedCategory);
@@ -1761,25 +1787,37 @@
         
         // 更新命令描述
         function updateCommandDescription() {
-            const select = document.getElementById('predefined-select');
-            const descriptionDiv = document.getElementById('command-description');
-            
-            if (select.value === '') {
-                descriptionDiv.style.display = 'none';
-                return;
-            }
-            
-            const selectedIndex = parseInt(select.value);
-            const selectedCommand = predefinedCommands[selectedIndex];
-            
-            if (selectedCommand) {
-                descriptionDiv.innerHTML = `
-                    <strong>命令:</strong> <code>${selectedCommand.command}</code><br>
-                    <strong>描述:</strong> ${selectedCommand.description}
-                `;
-                descriptionDiv.style.display = 'block';
-            } else {
-                descriptionDiv.style.display = 'none';
+            try {
+                const select = document.getElementById('predefined-select');
+                const descriptionDiv = document.getElementById('command-description');
+                
+                if (!select || !descriptionDiv) return;  // Exit if elements don't exist
+                
+                if (select.value === '') {
+                    descriptionDiv.style.display = 'none';
+                    return;
+                }
+                
+                const selectedIndex = parseInt(select.value);
+                // 确保 predefinedCommands 存在且为数组
+                if (!predefinedCommands || !Array.isArray(predefinedCommands)) {
+                    descriptionDiv.style.display = 'none';
+                    return;
+                }
+                
+                const selectedCommand = predefinedCommands[selectedIndex];
+                
+                if (selectedCommand) {
+                    descriptionDiv.innerHTML = `
+                        <strong>命令:</strong> <code>${selectedCommand.command}</code><br>
+                        <strong>描述:</strong> ${selectedCommand.description}
+                    `;
+                    descriptionDiv.style.display = 'block';
+                } else {
+                    descriptionDiv.style.display = 'none';
+                }
+            } catch (error) {
+                console.error('Error in updateCommandDescription:', error);
             }
         }
         
@@ -1828,14 +1866,18 @@
             } catch (error) {
                 console.error('获取应用信息失败:', error);
                 showMessage('获取应用信息失败: ' + error.message, 'error');
-                document.getElementById('apps-container').innerHTML = 
-                    '<p style="color: red;">获取应用信息失败</p>';
+                const container = document.getElementById('apps-container');
+                if (container) {
+                    container.innerHTML = 
+                        '<p style="color: red;">获取应用信息失败</p>';
+                }
             }
         }
 
         // 显示应用信息
         function displayAppsInfo(clientApps, clients) {
             const container = document.getElementById('apps-container');
+            if (!container) return;  // Exit if element doesn't exist
             
             if (!clientApps || Object.keys(clientApps).length === 0) {
                 container.innerHTML = '<div class="no-apps">暂无客户端应用信息</div>';
@@ -1893,12 +1935,17 @@
                 `;
             }).join('');
 
-            container.innerHTML = `<div class="app-grid">${html}</div>`;
+            if (container) {
+                container.innerHTML = `<div class="app-grid">${html}</div>`;
+            }
         }
 
         // 手动刷新应用信息
         function refreshAppsInfo() {
-            document.getElementById('apps-container').innerHTML = '<p>正在刷新应用信息...</p>';
+            const container = document.getElementById('apps-container');
+            if (container) {
+                container.innerHTML = '<p>正在刷新应用信息...</p>';
+            }
             fetchAppsInfo();
         }
         
@@ -1936,6 +1983,7 @@
         // 刷新应用管理数据
         async function refreshAppsManagement() {
             const container = document.getElementById('app-management-container');
+            if (!container) return;  // Exit if element doesn't exist
             container.innerHTML = '<p>正在加载应用管理数据...</p>';
 
             try {
@@ -1956,18 +2004,24 @@
                 
                 displayAppsManagement(originalAppsData, originalClientsData);
                 
-                document.getElementById('app-management-last-update').textContent = 
-                    `最后更新: ${new Date().toLocaleString('zh-CN')}`;
+                const lastUpdateElement = document.getElementById('app-management-last-update');
+                if (lastUpdateElement) {
+                    lastUpdateElement.textContent = 
+                        `最后更新: ${new Date().toLocaleString('zh-CN')}`;
+                }
             } catch (error) {
                 console.error('获取应用管理数据失败:', error);
                 showMessage('获取应用管理数据失败: ' + error.message, 'error');
-                container.innerHTML = '<p style="color: red;">获取应用管理数据失败</p>';
+                if (container) {
+                    container.innerHTML = '<p style="color: red;">获取应用管理数据失败</p>';
+                }
             }
         }
 
         // 显示应用管理表格
         function displayAppsManagement(clientApps, clients) {
             const container = document.getElementById('app-management-container');
+            if (!container) return;  // Exit if element doesn't exist
             
             if (!clientApps || Object.keys(clientApps).length === 0) {
                 container.innerHTML = '<div class="no-apps">暂无应用数据</div>';
@@ -2055,7 +2109,9 @@
                 </table>
             `;
 
-            container.innerHTML = table;
+            if (container) {
+                container.innerHTML = table;
+            }
         }
 
         // 获取服务状态显示信息
@@ -2194,7 +2250,8 @@
         // 更新过滤器选项
         function updateFilterOptions(clientApps, clients) {
             const clientFilter = document.getElementById('filter-client');
-            const currentClientValue = clientFilter.value;
+            if (!clientFilter) return;  // Exit if element doesn't exist
+            const currentClientValue = clientFilter.value || '';
             
             // 保留第一个默认选项
             clientFilter.innerHTML = '<option value="">全部客户端</option>';
